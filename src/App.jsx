@@ -8,7 +8,7 @@ import About from "./pages/About";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-[linear-gradient(to_bottom_right,#0C044D,#5746CA)] text-white">
       <Navbar />
       <Outlet />
       <Footer />
