@@ -40,16 +40,13 @@ const HomeServices = () => {
     },
   ];
 
-  // State to track the selected service and its tags
-  const [selectedService, setSelectedService] = useState(services[1]); // Default to Marketing
+  const [selectedService, setSelectedService] = useState(services[1]);
 
-  // Set Marketing as default on initial render
   useEffect(() => {
     const defaultService = services.find(service => service.name === "Marketing");
     setSelectedService(defaultService);
-  }, []);  // Empty dependency array ensures this runs only on component mount
+  }, []);
 
-  // Handle service click to update the selected service and tags
   const handleServiceClick = (service) => {
     setSelectedService(service);
   };
