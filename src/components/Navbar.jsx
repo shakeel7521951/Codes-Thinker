@@ -51,29 +51,29 @@ const Navbar = () => {
                 </button>
 
                 {isCompanyOpen && (
-                <div className="absolute z-10 left-0 mt-2 w-42 rounded-md shadow-lg border border-[#15A2D5] bg-gradient-to-b from-[#1A58A0] to-[#384C84] py-4 gap-3 flex flex-col items-center text-center">
-                <a
-                  href="#"
-                  className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
-                >
-                  Leadership
-                </a>
-                <a
-                  href="#"
-                  className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
-                >
-                  Careers
-                </a>
-                <a
-                  href="#"
-                  className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
-                >
-                  Contact
-                </a>
-              </div>
-              
-              
-                
+                  <div className="absolute z-10 left-0 mt-2 w-42 rounded-md shadow-lg border border-[#15A2D5] bg-gradient-to-b from-[#1A58A0] to-[#384C84] py-4 gap-3 flex flex-col items-center text-center">
+                    <a
+                      href="#"
+                      className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
+                    >
+                      Leadership
+                    </a>
+                    <a
+                      href="#"
+                      className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
+                    >
+                      Careers
+                    </a>
+                    <a
+                      href="#"
+                      className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
+                    >
+                      Contact
+                    </a>
+                  </div>
+
+
+
                 )}
               </div>
 
@@ -85,8 +85,8 @@ const Navbar = () => {
           <div className="hidden md:block">
             <a
               href="#"
-              className="text-white px-4 py-2 border border-[#15A2D5] rounded-full text-lg font-medium 
-                hover:bg-gradient-to-r hover:from-[#c508ff] hover:to-[#18c9ff] transition-all duration-300"
+              className="text-white px-4 py-2 border border-[#15A2D5] rounded-full text-lg font-semibold 
+                shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
             >
               Book a Intro Call
             </a>
@@ -159,7 +159,7 @@ const Navbar = () => {
             <div className="w-full max-w-xs pt-2">
               <a
                 href="#"
-                className="block w-full text-center px-4 py-2 border border-[#15A2D5] rounded-full text-lg font-medium text-white hover:bg-gradient-to-r hover:from-[#c508ff] hover:to-[#18c9ff] transition-all duration-300"
+                className="block w-full text-center px-4 py-2 border border-[#15A2D5] rounded-full text-lg font-medium text-white shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
               >
                 Book a Intro Call
               </a>

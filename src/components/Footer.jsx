@@ -6,12 +6,12 @@ const Footer = () => {
   const supportLinks = ['Help Center', 'Privacy Policy', 'Terms & Conditions'];
   const contactInfo = [
     {
-      label: '123 Main St, Floor 4 San Francisco, CA',
+      label: 'Hassan Manzil Basement Hall Goheer Town Bahawlpur',
       href: '/#',
     },
     {
-      label: 'codesthinker@gmail.com',
-      href: 'mailto:contact@company.com',
+      label: 'info@codesthinker.com',
+      href: 'info@codesthinker.com',
     },
     {
       label: '+92 348 3873980',
@@ -21,12 +21,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#060145] text-white">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4 sm:px-6 py-10">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-4 sm:px-6 py-10">
         <div>
           <div className="flex-shrink-0 flex items-center">
             <img src="/logo.svg" alt="TOJO Global Logo" className="h-10 w-auto" />
           </div>
-          <p className="text-sm mt-5 w-[80%]">
+          <p className="text-md mt-5 w-[90%]">
             We're your one-stop shop for all things digital, offering a complete range of services — Management,
             Marketing, Development, Design, and Listing — to propel your business forward.
           </p>
@@ -86,7 +86,7 @@ const Footer = () => {
 
       <div className="border-t border-indigo-800">
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm text-white text-center md:text-right">© 2024 All Rights Reserved - Codes Thinker</p>
+          <p className="text-md text-white text-center md:text-right">© 2025 All Rights Reserved - Codes Thinker</p>
           <div className="flex gap-4 mt-2 md:mb-0">
             {[
               { icon: <FaTwitter />, href: '/#' },
