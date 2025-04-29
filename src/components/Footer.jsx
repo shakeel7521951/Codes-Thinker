@@ -31,7 +31,7 @@ const Footer = () => {
             Marketing, Development, Design, and Listing — to propel your business forward.
           </p>
         </div>
-
+        
         <div>
           <h4 className="text-sm uppercase text-indigo-600 font-bold mb-2">Quick Link</h4>
           <ul>
