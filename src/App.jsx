@@ -5,6 +5,10 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Team from "./pages/Team";
+import Careers from "./pages/Careers";
+import Contacts from "./pages/Contacts";
+import Clients from "./pages/Clients";
 
 const MainLayout = () => {
   return (
@@ -24,6 +28,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
+      { path: "/clients", element: <Clients /> },
+      { path: "/team", element: <Team /> },
+      { path: "/careers", element: <Careers /> },
+      { path: "/contact", element: <Contacts /> },
     ],
   },
 ]);

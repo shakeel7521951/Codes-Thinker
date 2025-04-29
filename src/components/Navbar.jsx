@@ -56,7 +56,7 @@ const Navbar = () => {
                       href="#"
                       className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
-                      Leadership
+                    Team
                     </a>
                     <a
                       href="#"
@@ -132,7 +132,7 @@ const Navbar = () => {
 
               {isCompanyOpen && (
                 <div className="mt-1 space-y-1">
-                  {['Leadership', 'Careers', 'Contact'].map((item) => (
+                  {['Team', 'Careers', 'Contact'].map((item) => (
                     <a
                       key={item}
                       href="#"
