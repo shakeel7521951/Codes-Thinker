@@ -52,8 +52,8 @@ const HomeServices = () => {
   };
 
   return (
-    <div className="bg-[linear-gradient(241deg,#060244.59%,#2C3594.76%)] py-10">
-      <h1 className="text-3xl lg:text-5xl font-extrabold leading-tight text-center text-white">
+    <div className="bg-white py-10">
+      <h1 className="text-3xl lg:text-5xl font-extrabold leading-tight text-center text-black">
         <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
           Services
         </span>{" "}

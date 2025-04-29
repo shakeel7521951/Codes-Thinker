@@ -19,7 +19,7 @@ const features = [
 
 const KeyFeatures = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center md:gap-16 lg:gap-32 bg-gradient-to-br from-[#080044] to-[#5025A9] text-white py-16 px-6">
+    <div className="flex flex-col lg:flex-row items-center justify-center md:gap-16 lg:gap-32 bg-gray-100 text-white py-16 px-6">
       
       {/* Circle Title */}
       <div className="flex items-center justify-center mb-10 lg:mb-0">

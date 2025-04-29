@@ -8,7 +8,7 @@ const HomeAbout = () => {
     ];
   
     return (
-      <div className="bg-[#060044] pt-30 pb-10 px-5">
+      <div className="bg-gray-100 pt-30 pb-10 px-5 text-black">
         <div className="container mx-auto flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-1/2">
             <img
@@ -26,7 +26,7 @@ const HomeAbout = () => {
               </span>
               Thinker
             </h1>
-            <p className="py-3 text-white">
+            <p className="py-3 text-black">
               We redefine excellence in business solution at Code's Thinker. Our
               unique services in marketing, branding, management, design,
               development, and listing enables us to support industries & companies in the

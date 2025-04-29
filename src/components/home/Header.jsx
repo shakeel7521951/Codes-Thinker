@@ -3,7 +3,7 @@ import Features from "./Features";
 
 const Header = () => {
   return (
-    <header className="min-h-screen bg-[linear-gradient(to_right,#0C044D,#5746CA)] text-white mb-[-80px]">
+    <header className="min-h-screen bg-white text-black mb-[-80px]">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6">
@@ -16,7 +16,7 @@ const Header = () => {
             <br />
             through Digital Innovation
           </h1>
-          <p className="text-lg leading-relaxed text-gray-200">
+          <p className="text-lg leading-relaxed text-black">
             Code's Thinker empowers startups to stand out and thrive with a full
             suite of digital services. Whether you're exploring crypto,
             enhancing marketing, building applications, or crafting captivating
