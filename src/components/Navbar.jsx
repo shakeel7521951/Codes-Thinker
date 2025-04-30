@@ -30,10 +30,10 @@ const Navbar = () => {
           {/* Centered Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex space-x-4 text-2xl">
-              <a href="#" className={navLinkClass}>Home {underlineSpan}</a>
+              <a href="/" className={navLinkClass}>Home {underlineSpan}</a>
               <a href="#" className={navLinkClass}>About {underlineSpan}</a>
               <a href="#" className={navLinkClass}>Services {underlineSpan}</a>
-              <a href="#" className={navLinkClass}>Clients {underlineSpan}</a>
+              <a href="/clients" className={navLinkClass}>Clients {underlineSpan}</a>
 
               {/* Company Dropdown */}
               <div className="relative group">
@@ -53,19 +53,19 @@ const Navbar = () => {
                 {isCompanyOpen && (
                   <div className="absolute z-10 left-0 mt-2 w-42 rounded-md shadow-lg border border-[#15A2D5] bg-gradient-to-b from-[#1A58A0] to-[#384C84] py-4 gap-3 flex flex-col items-center text-center">
                     <a
-                      href="#"
+                      href="/team"
                       className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
                     Team
                     </a>
                     <a
-                      href="#"
+                      href="/careers"
                       className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
                       Careers
                     </a>
                     <a
-                      href="#"
+                      href="/contact"
                       className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
                       Contact
