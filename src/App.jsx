@@ -9,6 +9,8 @@ import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import Contacts from "./pages/Contacts";
 import Clients from "./pages/Clients";
+import Service from "./pages/Service";
+import ServiceDetail from "./components/services/ServicesDetail";
 
 const MainLayout = () => {
   return (
@@ -28,6 +30,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
+      { path: "/services", element: <Service /> },
+      { path: "/servicedetail/:id", element: <ServiceDetail /> },
       { path: "/clients", element: <Clients /> },
       { path: "/team", element: <Team /> },
       { path: "/careers", element: <Careers /> },
