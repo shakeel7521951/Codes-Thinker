@@ -23,21 +23,29 @@ const departments = {
 
 const OurTeam = () => {
   return (
-    <div className="bg-gradient-to-b from-[#050B2C] to-[#2A5BCF] text-white font-sans">
+    <div className="">
       <header className="text-center py-10">
         <h1 className="text-3xl md:text-5xl font-bold mb-2">
-          Meet Our <span className="text-purple-400">Team</span>
+          Meet Our{" "}
+          <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+            Team
+          </span>
         </h1>
-        <p className="max-w-xl mx-auto text-sm md:text-lg px-4 md:p-0 text-gray-200">
-          Our team of passionate and experienced professionals is dedicated to driving your success. From strategy to execution, we combine creativity, innovation, and insight to deliver exceptional results.
+        <p className="max-w-xl mx-auto text-sm md:text-lg px-4 md:p-0 text-black">
+          Our team of passionate and experienced professionals is dedicated to
+          driving your success. From strategy to execution, we combine
+          creativity, innovation, and insight to deliver exceptional results.
         </p>
       </header>
 
       {Object.entries(departments).map(([dept, members]) => (
         <section key={dept} className="py-10 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-2xl font-semibold text-purple-300 mb-6 text-start">
-              {dept} <span className="text-white">Department</span>
+            <h2 className="text-2xl md:text-4xl font-bold text-black mb-6 text-start">
+              {dept}{" "}
+              <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+                Department
+              </span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center">
               {members.map((member, idx) => (
@@ -45,7 +53,9 @@ const OurTeam = () => {
                   key={idx}
                   className="group relative rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105"
                 >
-                  <div className="shine-wrapper h-80"> {/* Increased height here */}
+                  <div className="shine-wrapper h-80">
+                    {" "}
+                    {/* Increased height here */}
                     <img
                       src={member.img}
                       alt={member.name}
