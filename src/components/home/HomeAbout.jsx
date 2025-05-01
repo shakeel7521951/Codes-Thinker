@@ -8,7 +8,7 @@ const HomeAbout = () => {
     ];
   
     return (
-      <div className="bg-gray-100 pt-30 pb-10 px-5 text-black">
+      <div className="bg-gray-100 pt-14 pb-10 px-5 text-black">
         <div className="container mx-auto flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-1/2">
             <img
@@ -21,7 +21,7 @@ const HomeAbout = () => {
           <div className="w-full md:w-1/2 mt-2">
             <h1 className="text-3xl md:text-5xl font-bold">
               About{" "}
-              <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+              <span className="text-blue-400">
                 Code's{" "}
               </span>
               Thinker

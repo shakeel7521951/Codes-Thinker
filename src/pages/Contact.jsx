@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="text-center mb-10">
         <p className="text-sm text-gray-600">Let's Talk</p>
         <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
-           <span className="text-[#0F00AA]">Let's Collaborate</span> and Innovate
+          <span className="text-[#0F00AA]">Let's Collaborate</span> and Innovate
         </h1>
       </div>
 
@@ -33,7 +33,11 @@ const Contact = () => {
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-5 items-start mt-4">
-              <img src={item.img} alt="contact icon" className="w-12 shadow-2xl rounded-ful" />
+              <img
+                src={item.img}
+                alt="contact icon"
+                className="w-12 shadow-2xl rounded-ful"
+              />
               <div>
                 <h3 className="font-semibold text-xl text-gray-800">
                   {item.title}
@@ -79,8 +83,10 @@ const Contact = () => {
                 className="w-full bg-transparent outline-none text-white placeholder-white"
               />
             </div>
-            <div className="flex  items-start  border-2
-             border-white text-white px-3 py-2 rounded w-full">
+            <div
+              className="flex  items-start  border-2
+             border-white text-white px-3 py-2 rounded w-full"
+            >
               <textarea
                 name="message"
                 placeholder="Message"
