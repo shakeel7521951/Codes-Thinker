@@ -6,6 +6,8 @@ import KeyFeatures from '../components/home/KeyFeatures';
 import OurValue from '../components/home/OurValue';
 import Progress from '../components/home/Progress';
 import Testimonials from '../components/home/Testimonials';
+import Contact from './Contact';
+import Faqs from './Faqs';
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
         <OurValue />
         <Progress />
         <Testimonials />
+        <Contact />
+        <Faqs />
     </div>
   )
 }
