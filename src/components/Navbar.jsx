@@ -3,21 +3,15 @@ import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setShowMenu(prev => !prev);
+    setShowDropdown(false); // Close dropdown when toggling menu
   };
 
-  const toggleCompany = () => {
-    setIsCompanyOpen(!isCompanyOpen);
-  };
-
-  const navLinkClass = `group relative text-white px-3 py-2 text-lg font-medium hover:text-[#01b5e8] transition-colors duration-300`;
-  const underlineSpan = (
-    <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#01b5e8] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-  );
+  const toggleDropdown = () => setShowDropdown(prev => !prev);
 
   return (
     <nav className="bg-[#060145] shadow-md py-2">
@@ -86,6 +80,9 @@ const Navbar = () => {
                       Contact
                     </a>
                   </div>
+
+
+
                 )}
               </div>
 
@@ -94,17 +91,21 @@ const Navbar = () => {
               </a>
             </div>
           </div>
+          <a href="#" className="hover:border-t-2 hover:border-[#05C806] ">About</a>
+          <a href="#" className="hover:border-t-2 hover:border-[#05C806] ">Giving</a>
+          <a href="#" className="hover:border-t-2 hover:border-[#05C806] ">Blog</a>
+          <a href="#" className="hover:border-t-2 hover:border-[#05C806] ">Contact</a>
+        </nav>
 
-          {/* Book a Call Button */}
-          <div className="hidden md:block">
-            <a
-              href="#"
-              className="text-white px-4 py-2 border border-[#15A2D5] rounded-full text-lg font-semibold 
-                shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
-            >
-              Book a Intro Call
-            </a>
-          </div>
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex items-center space-x-6">
+          <button className="flex items-center font-medium">
+            <FaUserCircle className="mr-1" /> Login
+          </button>
+          <button className="bg-[#05C806] hover:bg-[#038C04] transition rounded px-4 py-2 text-sm font-semibold">
+            Get Started For Free
+          </button>
+        </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
@@ -189,8 +190,11 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    </nav>
+    </div>
   );
 };
 
 export default Navbar;
+
+
+
