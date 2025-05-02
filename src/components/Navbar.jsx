@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,7 +78,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              <a href="#" className={navLinkClass}>Packages {underlineSpan}</a>
+              <Link to='/projects' className={navLinkClass}>Projects {underlineSpan}</Link>
             </div>
           </div>
 
@@ -145,14 +146,14 @@ const Navbar = () => {
               )}
             </div>
 
-            {['Packages'].map((item) => (
-              <a
+            {['Projects'].map((item) => (
+              <Link
                 key={item}
-                href="#"
+                to='/projects'
                 className="w-full max-w-xs text-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
               >
                 {item}
-              </a>
+              </Link>
             ))}
 
             {/* CTA Button */}

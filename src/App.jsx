@@ -11,6 +11,7 @@ import Contacts from "./pages/Contacts";
 import Clients from "./pages/Clients";
 import Service from "./pages/Service";
 import ServiceDetail from "./components/services/ServicesDetail";
+import Projeects from '../src/pages/Projects'
 
 const MainLayout = () => {
   return (
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { path: "/team", element: <Team /> },
       { path: "/careers", element: <Careers /> },
       { path: "/contact", element: <Contacts /> },
+      { path: "/projects", element: <Projeects/> },
     ],
   },
 ]);
