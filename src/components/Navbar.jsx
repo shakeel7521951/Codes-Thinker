@@ -191,7 +191,7 @@
 
 
 import React, { useState } from 'react';
-import { FaUserCircle, FaAngleDown, FaBars } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -205,23 +205,62 @@ const Navbar = () => {
   const toggleDropdown = () => setShowDropdown(prev => !prev);
 
   return (
-    <div className="relative z-50 bg-[#002E3D] ">
-      {/* Navbar Container */}
-      <header className="w-full py-4 px-4 md:px-20 flex justify-between items-center bg-transparent text-white">
-        {/* Logo */}
-        <img src="/logo2.png" alt="Ireland Pay Logo" className="h-10" />
+    <nav className="bg-[#060145] shadow-md py-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <img src="/logo.svg" alt="TOJO Global Logo" className="h-10 w-auto" />
+          </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 items-center">
-          <div className="relative">
-            <button onClick={toggleDropdown} className="flex items-center">
-              <span className="hover:border-t-2 hover:border-[#05C806] ">Solutions</span>
-              <FaAngleDown className={`ml-1 transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
-            </button>
-            {showDropdown && (
-              <div className="absolute top-full mt-2 bg-white text-[#002f3f] rounded shadow-lg py-2 w-56 z-50">
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Dual Pricing</a>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Accounting Integrations</a>
+          {/* Centered Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex space-x-4 text-2xl">
+              <a href="/" className={navLinkClass}>Home {underlineSpan}</a>
+              <a href="#" className={navLinkClass}>About {underlineSpan}</a>
+              <a href="#" className={navLinkClass}>Services {underlineSpan}</a>
+              <a href="/clients" className={navLinkClass}>Clients {underlineSpan}</a>
+
+              {/* Company Dropdown */}
+              <div className="relative group">
+                <button
+                  onClick={toggleCompany}
+                  className={`${navLinkClass} flex items-center`}
+                >
+                  Company
+                  {isCompanyOpen ? (
+                    <FaChevronUp className="ml-1 h-3 w-3 cursor-pointer" />
+                  ) : (
+                    <FaChevronDown className="ml-1 h-3 w-3 cursor-pointer" />
+                  )}
+                  {underlineSpan}
+                </button>
+
+                {isCompanyOpen && (
+                  <div className="absolute z-10 left-0 mt-2 w-42 rounded-md shadow-lg border border-[#15A2D5] bg-gradient-to-b from-[#1A58A0] to-[#384C84] py-4 gap-3 flex flex-col items-center text-center">
+                    <a
+                      href="/team"
+                      className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
+                    >
+                    Team
+                    </a>
+                    <a
+                      href="/careers"
+                      className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
+                    >
+                      Careers
+                    </a>
+                    <a
+                      href="/contact"
+                      className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
+                    >
+                      Contact
+                    </a>
+                  </div>
+
+
+
+                )}
               </div>
             )}
           </div>

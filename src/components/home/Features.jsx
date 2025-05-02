@@ -25,7 +25,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="mx-auto flex flex-wrap justify-center gap-6">
+    <div className="mx-auto flex flex-wrap justify-center gap-6 mt-14">
       {features.map((feature, index) => (
         <div
           key={index}

@@ -80,7 +80,7 @@ const ServicesProvide = () => {
                 <button
                   onClick={() => handleReadMore(item)}
                   aria-label="Learn More"
-                  className="mt-2 w-full sm:w-auto px-6 sm:px-10 lg:px-16 py-2 sm:py-3 text-sm sm:text-base lg:text-lg font-semibold text-white rounded shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 cursor-pointer"
+                  className="mt-2 w-full sm:w-auto px-6 sm:px-10 lg:px-16 py-2 sm:py-3 text-sm sm:text-base lg:text-lg font-semibold text-white rounded-full shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 cursor-pointer"
                 >
                   Learn More
                 </button>

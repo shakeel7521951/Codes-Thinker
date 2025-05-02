@@ -1,0 +1,112 @@
+import React from "react";
+import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
+const Contact = () => {
+  return (
+    <div className="px-4 py-10 bg-gray-50">
+      <div className="text-center mb-10">
+        <p className="text-sm text-gray-600">Let's Talk</p>
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
+          <span className="text-[#0F00AA]">Let's Collaborate</span> and Innovate
+        </h1>
+      </div>
+
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10">
+        {/* Left Section */}
+        <div className="md:w-1/2 flex flex-col gap-8">
+          {[
+            {
+              img: "/home/contactIcon1.png",
+              title: "Discuss Your Project",
+              desc: "Invite clients to share their ideas and requirements, fostering an open dialogue about potential collaborations.",
+            },
+            {
+              img: "/home/contactIcon2.png",
+              title: "Get a Free Consultation",
+              desc: "Offer a no-obligation consultation to understand the client's needs and propose tailored solutions.",
+            },
+            {
+              img: "/home/contactIcon3.png",
+              title: "Reach Us Anytime",
+              desc: "Provide multiple contact channels, ensuring clients can connect with you at their convenience.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} className="flex gap-5 items-start mt-4">
+              <img
+                src={item.img}
+                alt="contact icon"
+                className="w-12 shadow-2xl rounded-ful"
+              />
+              <div>
+                <h3 className="font-semibold text-xl text-gray-800">
+                  {item.title}
+                </h3>
+                <p className=" text-gray-600">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Right Section */}
+        <div className="md:w-2/3 bg-[linear-gradient(45deg,#0F00AA,#060044)] p-6 rounded-lg shadow-lg">
+          <h2 className="text-xl font-bold text-center text-white mb-6">
+            CONTACT US
+          </h2>
+          <form className="flex flex-col gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex items-center  border-b-2 border-white text-white px-3 py-2 rounded w-full">
+                <FaUser className="me-2" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  className="w-full bg-transparent outline-none text-white placeholder-white"
+                />
+              </div>
+              <div className="flex items-center border-b-2 border-white text-white px-3 py-2 rounded w-full">
+                <FaPhoneAlt className="me-2" />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  className="w-full bg-transparent outline-none text-white placeholder-white"
+                />
+              </div>
+            </div>
+            <div className="flex items-center border-b-2 border-white text-white px-3 py-2 rounded w-full">
+              <MdEmail className="me-2" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="w-full bg-transparent outline-none text-white placeholder-white"
+              />
+            </div>
+            <div
+              className="flex  items-start  border-2
+             border-white text-white px-3 py-2 rounded w-full"
+            >
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={4}
+                className="w-full bg-transparent outline-none text-white placeholder-white resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-fit mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg 
+        bg-yellow-400 hover:bg-yellow-500 
+        bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

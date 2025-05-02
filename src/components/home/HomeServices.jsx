@@ -62,13 +62,13 @@ const HomeServices = () => {
       <p className="text-center flex mx-auto px-5 md:w-[50rem]">
         TOJO GLOBAL offers crypto solutions, targeted marketing, impactful design, custom development, and professional video editing to elevate your brand.
       </p>
-      <div className="container flex flex-col md:flex-row gap-10 mx-auto rounded-3xl my-6 bg-[#41609B] p-5">
+      <div className="container flex flex-col md:flex-row gap-10 mx-auto rounded-3xl my-6 p-5">
         <div className="w-full md:w-1/3 flex flex-col gap-4">
           {services.map((service, index) => (
             <h4
               key={index}
-              className={`text-center px-10 py-2 rounded-3xl border shadow cursor-pointer font-bold text-2xl ${
-                service.name === selectedService.name ? "bg-[#1d8fb1] text-white" : "bg-[#222F6B] text-white"
+              className={`text-center px-10 py-2 rounded-md border border-[#0000001d] shadow cursor-pointer font-semibold text-2xl ${
+                service.name === selectedService.name ? "text-white bg-[#222F6B]" : "hover:bg-[#222F6B] text-black hover:text-white transition-all ease-in delay-100"
               }`}
               onClick={() => handleServiceClick(service)}
             >
@@ -83,7 +83,7 @@ const HomeServices = () => {
               {selectedService.tags.map((tag, index) => (
                 <h4
                   key={index}
-                  className="bg-[#165F91] w-fit px-3 py-2 rounded-xl font-semibold"
+                  className="text-black w-fit px-3 py-2 rounded-xl font-semibold"
                 >
                   {tag}
                 </h4>
