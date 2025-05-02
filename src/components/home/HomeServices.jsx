@@ -54,7 +54,7 @@ const HomeServices = () => {
   return (
     <div className="bg-white py-10">
       <h1 className="text-3xl lg:text-5xl font-extrabold leading-tight text-center text-black">
-        <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+        <span className="text-transparent bg-clip-text bg-[#0F00AA]">
           Services
         </span>{" "}
         We Offer
@@ -68,7 +68,7 @@ const HomeServices = () => {
             <h4
               key={index}
               className={`text-center px-10 py-2 rounded-md border border-[#0000001d] shadow cursor-pointer font-semibold text-2xl ${
-                service.name === selectedService.name ? "text-white bg-[#222F6B]" : "hover:bg-[#222F6B] text-black hover:text-white transition-all ease-in delay-100"
+                service.name === selectedService.name ? "text-white bg-[#0F00AA]" : "hover:bg-[#0F00AA] text-black hover:text-white transition-all ease-in delay-100"
               }`}
               onClick={() => handleServiceClick(service)}
             >

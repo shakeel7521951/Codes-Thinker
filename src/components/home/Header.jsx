@@ -3,14 +3,14 @@ import Features from "./Features";
 
 const Header = () => {
   return (
-    <header className="min-h-screen bg-white text-black mb-[-80px]">
+    <header className="bg-white text-black mb-[-80px]">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6">
           <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight">
             Elevating
             <br />
-            <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+            <span className="text-[#0F00A6]">
               Brands
             </span>
             <br />
@@ -26,13 +26,13 @@ const Header = () => {
           <div className="flex gap-4 flex-wrap">
             <button
               aria-label="Get Started"
-              className="mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
+              className="mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
             >
               Get Started
             </button>
             <button
               aria-label="View Portfolio"
-              className="mt-2 px-9 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
+              className="mt-2 px-9 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#FFF200,#e1c700,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 hover:scale-105"
             >
               Portfolio
             </button>
@@ -48,7 +48,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Features />
+      {/* <Features /> */}
     </header>
   );
 };
