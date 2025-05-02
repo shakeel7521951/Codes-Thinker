@@ -32,12 +32,12 @@ const Testimonials = () => {
 
   return (
     <div className="py-10 px-4">
-      <div className="w-full max-w-5xl mx-auto bg-[linear-gradient(45deg,#0A0140,#8923D7,#0C114D)] p-8 md:p-10 rounded-xl flex flex-col md:flex-row gap-8 items-center">
+      <div className="w-full max-w-5xl mx-auto bg-[linear-gradient(45deg,#0F00AA,#060044)] p-8 md:p-10 rounded-xl flex flex-col md:flex-row gap-8 items-center">
         {/* Heading */}
         <div className="w-full md:w-1/3 text-center md:text-left">
           <h1 className="text-3xl font-bold text-white leading-snug">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+            <span className="text-[#FFF200]">
               Clients,
             </span>{" "}
             In Their Own Words

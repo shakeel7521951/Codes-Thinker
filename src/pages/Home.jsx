@@ -14,8 +14,8 @@ import Features from '../components/home/Features';
 const Home = () => {
   return (
     <div>
-        {/* <Header /> */}
-        <HomeHeader />
+        <Header />
+        {/* <HomeHeader /> */}
         <Features />
         <HomeAbout />
         <HomeServices />

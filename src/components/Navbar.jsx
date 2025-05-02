@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,16 +25,30 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <img src="/logo.svg" alt="TOJO Global Logo" className="h-10 w-auto" />
+            <Link to="/">
+              <img
+                src="/logo.svg"
+                alt="TOJO Global Logo"
+                className="h-10 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Centered Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex space-x-4 text-2xl">
-              <Link to="/" className={navLinkClass}>Home {underlineSpan}</Link>
-              <Link to="/about" className={navLinkClass}>About {underlineSpan}</Link>
-              <Link to="/services" className={navLinkClass}>Services {underlineSpan}</Link>
-              <Link to="/clients" className={navLinkClass}>Clients {underlineSpan}</Link>
+              <Link to="/" className={navLinkClass}>
+                Home {underlineSpan}
+              </Link>
+              <Link to="/about" className={navLinkClass}>
+                About {underlineSpan}
+              </Link>
+              <Link to="/services" className={navLinkClass}>
+                Services {underlineSpan}
+              </Link>
+              <Link to="/clients" className={navLinkClass}>
+                Clients {underlineSpan}
+              </Link>
 
               {/* Company Dropdown */}
               <div className="relative group">
@@ -57,7 +71,7 @@ const Navbar = () => {
                       href="/team"
                       className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
-                    Team
+                      Team
                     </a>
                     <a
                       href="/careers"
@@ -75,7 +89,9 @@ const Navbar = () => {
                 )}
               </div>
 
-              <a href="#" className={navLinkClass}>Packages {underlineSpan}</a>
+              <a href="#" className={navLinkClass}>
+                Packages {underlineSpan}
+              </a>
             </div>
           </div>
 
@@ -96,7 +112,11 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#01b5e8] focus:outline-none"
             >
-              {isMenuOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <FaTimes className="h-6 w-6" />
+              ) : (
+                <FaBars className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -106,7 +126,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-3 sm:px-3 flex flex-col items-center">
-            {['Home', 'About', 'Services', 'Clients'].map((item) => (
+            {["Home", "About", "Services", "Clients"].map((item) => (
               <a
                 key={item}
                 href="#"
@@ -124,13 +144,17 @@ const Navbar = () => {
               >
                 Company
                 <span className="absolute right-4">
-                  {isCompanyOpen ? <FaChevronUp className="h-4 w-4" /> : <FaChevronDown className="h-4 w-4" />}
+                  {isCompanyOpen ? (
+                    <FaChevronUp className="h-4 w-4" />
+                  ) : (
+                    <FaChevronDown className="h-4 w-4" />
+                  )}
                 </span>
               </button>
 
               {isCompanyOpen && (
                 <div className="mt-1 space-y-1">
-                  {['Team', 'Careers', 'Contact'].map((item) => (
+                  {["Team", "Careers", "Contact"].map((item) => (
                     <a
                       key={item}
                       href="#"
@@ -143,7 +167,7 @@ const Navbar = () => {
               )}
             </div>
 
-            {['Packages'].map((item) => (
+            {["Packages"].map((item) => (
               <a
                 key={item}
                 href="#"

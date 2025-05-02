@@ -8,13 +8,13 @@ const OurValue = () => {
       <div className="w-full md:w-1/2 flex flex-col items-start">
         <h1 className="text-3xl md:text-5xl font-bold">
           OUR{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18c8ff] to-[#c608ff]">
+          <span className="text-transparent bg-clip-text bg-[#0F00AA]">
             VALUE
           </span>
         </h1>
         
         {/* Gradient Line */}
-        <div className="w-24 h-1 bg-gradient-to-r from-[#18c8ff] to-[#c608ff] rounded-full my-4" />
+        <div className="w-24 h-1 bg-gradient-to-r from-[#0F00AA] to-[#0F00AA] rounded-full my-4" />
 
         <p className="text-xl md:text-3xl font-semibold mb-8 w-full md:w-3/4">
           A melting pot for the best ideas

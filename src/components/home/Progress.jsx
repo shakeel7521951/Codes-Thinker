@@ -33,7 +33,7 @@ const Progress = () => {
     <div className="bg-gray-100 text-center py-16 px-4">
       <h1 className="text-3xl md:text-5xl font-bold mb-6">
         Our{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500">
+        <span className="text-[#0F00AA]">
           Progress
         </span>
       </h1>
