@@ -51,10 +51,7 @@ const ServicesProvide = () => {
     <div className="w-[90vw] max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h1 className="text-3xl md:text-5xl font-bold">
-          Latest{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18c8ff] to-[#c608ff]">
-            Services
-          </span>
+          Latest <span className="text-[#0F00AA]">Services</span>
         </h1>
       </div>
 
@@ -62,7 +59,7 @@ const ServicesProvide = () => {
         {ServiceData.map((item) => (
           <div
             key={item.id}
-            className="group relative bg-white rounded-xl border-t-4 border-b-4 border-t-[#18c8ff] border-b-[#c608ff] overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+            className="group relative bg-white rounded-xl border-t-4 border-b-4 border-t-[#0F00AA] border-b-[#0F00AA] overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl duration-300"
           >
             <div className="shine-wrapper">
               <img
@@ -80,7 +77,7 @@ const ServicesProvide = () => {
                 <button
                   onClick={() => handleReadMore(item)}
                   aria-label="Learn More"
-                  className="mt-2 w-full sm:w-auto px-6 sm:px-10 lg:px-16 py-2 sm:py-3 text-sm sm:text-base lg:text-lg font-semibold text-white rounded shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 cursor-pointer"
+                  className="mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
                 >
                   Learn More
                 </button>

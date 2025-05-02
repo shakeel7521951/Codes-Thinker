@@ -33,7 +33,7 @@ const Progress = () => {
     <div className="bg-gray-100 text-center py-16 px-4">
       <h1 className="text-3xl md:text-5xl font-bold mb-6">
         Our{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500">
+        <span className="text-[#0F00AA]">
           Progress
         </span>
       </h1>
@@ -47,7 +47,7 @@ const Progress = () => {
         {stats.map((item, index) => (
           <div
             key={index}
-            className="w-56 h-44 flex flex-col justify-center items-center bg-[linear-gradient(45deg,#060043,#4764D6)] border-2 border-white rounded-2xl text-white shadow-md hover:scale-105 transition-transform duration-300"
+            className="w-52 h-44 flex flex-col justify-center items-center bg-[linear-gradient(45deg,#060043,#4764D6)] border-2 border-white rounded-2xl text-white shadow-md hover:scale-105 transition-transform duration-300"
           >
             <h1 className="text-3xl md:text-4xl font-bold">
               {item.prefix || ""}

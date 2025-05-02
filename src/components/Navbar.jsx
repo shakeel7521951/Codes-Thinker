@@ -31,10 +31,10 @@ const Navbar = () => {
           {/* Centered Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex space-x-4 text-2xl">
-              <a href="/" className={navLinkClass}>Home {underlineSpan}</a>
-              <a href="#" className={navLinkClass}>About {underlineSpan}</a>
-              <a href="#" className={navLinkClass}>Services {underlineSpan}</a>
-              <a href="/clients" className={navLinkClass}>Clients {underlineSpan}</a>
+              <Link to="/" className={navLinkClass}>Home {underlineSpan}</Link>
+              <Link to="/about" className={navLinkClass}>About {underlineSpan}</Link>
+              <Link to="/services" className={navLinkClass}>Services {underlineSpan}</Link>
+              <Link to="/clients" className={navLinkClass}>Clients {underlineSpan}</Link>
 
               {/* Company Dropdown */}
               <div className="relative group">
@@ -72,9 +72,6 @@ const Navbar = () => {
                       Contact
                     </a>
                   </div>
-
-
-
                 )}
               </div>
 

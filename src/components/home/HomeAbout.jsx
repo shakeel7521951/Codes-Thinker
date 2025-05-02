@@ -8,7 +8,7 @@ const HomeAbout = () => {
     ];
   
     return (
-      <div className="bg-gray-100 pt-30 pb-10 px-5 text-black">
+      <div className="bg-white pt-10 pb-10 px-5 text-black">
         <div className="container mx-auto flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-1/2">
             <img
@@ -21,7 +21,7 @@ const HomeAbout = () => {
           <div className="w-full md:w-1/2 mt-2">
             <h1 className="text-3xl md:text-5xl font-bold">
               About{" "}
-              <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+              <span className="text-[#0F00AA]">
                 Code's{" "}
               </span>
               Thinker
@@ -39,7 +39,7 @@ const HomeAbout = () => {
               {aboutFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-[#091E60] rounded-full w-fit shadow-lg px-4 pe-6 py-1 flex items-center"
+                  className="bg-[#0F00AA] rounded-full w-fit shadow-lg px-4 pe-6 py-1 flex items-center"
                 >
                   <span className="w-[15px] h-[15px] mr-4 rounded-full bg-[linear-gradient(142deg,#18c8ff,#c608ff)]"></span>
                   <p className="text-md text-white">{feature.text}</p>

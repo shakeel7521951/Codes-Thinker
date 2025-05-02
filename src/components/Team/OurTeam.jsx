@@ -27,7 +27,7 @@ const OurTeam = () => {
       <header className="text-center py-10">
         <h1 className="text-3xl md:text-5xl font-bold mb-2">
           Meet Our{" "}
-          <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+          <span className="text-[#0F00AA]">
             Team
           </span>
         </h1>
@@ -43,7 +43,7 @@ const OurTeam = () => {
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-2xl md:text-4xl font-bold text-black mb-6 text-start">
               {dept}{" "}
-              <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+              <span className="text-[#0F00AA]">
                 Department
               </span>
             </h2>

@@ -7,7 +7,7 @@ const HeroServices = () => {
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6">
           <h1 className="text-4xl lg:text-6xl font-extrabold">
-            Perfect It <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+            Perfect It <span className="text-[#0F00AA]">
               Solutions
             </span> Business
           </h1>
@@ -15,9 +15,9 @@ const HeroServices = () => {
           Perfect IT Solutions provides expert services in software development, IT consulting, cloud solutions, network security, data management, technical support, web design, and system integration to empower business growth and efficiency.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <button
+          <button
               aria-label="Get Started"
-              className="mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
+              className="mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
             >
               learn more 
             </button>
