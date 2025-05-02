@@ -3,7 +3,7 @@ import Features from "./Features";
 
 const Header = () => {
   return (
-    <header className="min-h-screen bg-white text-black mb-[-80px]">
+    <header className="bg-white text-black mb-[-80px]">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6">
