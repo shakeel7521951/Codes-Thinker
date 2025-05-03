@@ -48,7 +48,7 @@ const ServicesProvide = () => {
   };
 
   return (
-    <div className="w-[90vw] max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <div className="  w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h1 className="text-3xl md:text-5xl font-bold">
           Latest <span className="text-[#0F00AA]">Services</span>

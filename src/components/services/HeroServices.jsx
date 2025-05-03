@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroServices = () => {
   return (
-    <header className="min-h-screen bg-white text-black mb-[-100px]">
+    <header className="min-h-screen bg-white text-black ">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6">
@@ -12,28 +12,28 @@ const HeroServices = () => {
             </span> Business
           </h1>
           <p className="text-lg leading-relaxed text-black">
-          Perfect IT Solutions provides expert services in software development, IT consulting, cloud solutions, network security, data management, technical support, web design, and system integration to empower business growth and efficiency.
+            Perfect IT Solutions provides expert services in software development, IT consulting, cloud solutions, network security, data management, technical support, web design, and system integration to empower business growth and efficiency.
           </p>
           <div className="flex gap-4 flex-wrap">
-          <button
+            <button
               aria-label="Get Started"
               className="mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
             >
-              learn more 
+              learn more
             </button>
           </div>
         </div>
 
         {/* Right Content */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="w-full h-64 md:h-96 bg-white/10 rounded-xl  flex items-center justify-center text-white text-xl backdrop-blur-md border border-white/20">
-            {/* You can place a Lottie animation, SVG, or image here */}
-            Image / Services
-            <img src="/services/hero.png" />
+          <div className="w-full h-64  md:h-96  rounded-xl  flex items-center justify-center text-white text-xl backdrop-blur-md border bg-white border-white/20">
+            <div className="w-full h-full ">
+              <img src="/services/hero.png" className=" w-full h-full"/>
+            </div>
           </div>
         </div>
       </div>
-    
+
     </header>
   );
 };

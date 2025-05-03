@@ -1,75 +1,79 @@
 import React, { useState } from 'react';
-
+import novieta1 from '../../../public/project/novieta1.png';
+import novieta2 from '../../../public/project/novieta2.png';
+import novieta3 from '../../../public/project/novieta3.png';
+import novieta4 from '../../../public/project/novieta4.png';
 const projectsData = {
   All: [
     {
-      title: 'E-Commerce Website',
+      title: 'Multi-Service Creative Agency',
       description: 'A fully responsive online store with cart, payment gateway, and admin panel.',
-      featured: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s',
+      featured: novieta1,
       thumbnails: [
-        'https://cdn.prod.website-files.com/62d84e447b4f9e7263d31e94/6399a4d27711a5ad2c9bf5cd_ben-sweet-2LowviVHZ-E-unsplash-1.jpeg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s',
+        novieta1, novieta2, novieta3, novieta4
       ],
-      link: 'https://yourprojectlink.com',
+      link: 'https://novietaaplus.com/',
     },
     {
-      title: 'Portfolio Website',
-      description: 'A clean portfolio showcasing work and contact form.',
-      featured: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+      title: 'Trend Car Care',
+      description: 'A fully responsive online store with cart, payment gateway, and admin panel.',
+      featured: '../../../public/project/trend1.png',
       thumbnails: [
-        'https://cdn.pixabay.com/photo/2017/01/06/19/15/soap-bubble-1958650_640.jpg',
-        'https://cdn.pixabay.com/photo/2021/08/18/08/53/hummingbird-6554093_640.jpg',
-        'https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg',
+        '../../../public/project/trend1.png',
+        '../../../public/project/trend2.png',
+        '../../../public/project/trend3.png',
+        '../../../public/project/trend4.png',
       ],
-      link: 'https://portfolio.com',
+      link: 'https://trendcarcare.com/',
     },
     {
-      title: 'Admin Dashboard',
-      description: 'Manage data, view stats, and generate reports.',
-      featured: 'https://images.unsplash.com/photo-1557804506-669a67965ba0',
+      title: 'Cash rewards game',
+      description: 'Become part of a thriving global community today and unlock thousands of dollars in earnings while connecting with a diverse international network.',
+      featured: '../../../public/project/bmx1.png',
       thumbnails: [
-        'https://cdn.pixabay.com/photo/2022/11/03/09/45/mountains-7567495_640.jpg',
-        'https://cdn.pixabay.com/photo/2021/02/16/17/35/river-6021980_640.jpg',
-        'https://cdn.pixabay.com/photo/2017/08/30/07/51/lake-2691157_640.jpg',
+        '../../../public/project/bmx1.png',
+        '../../../public/project/bmx2.png',
+        '../../../public/project/bmx3.png',
+        '../../../public/project/bmx4.png',
       ],
-      link: 'https://adminpanel.com',
+      link: 'https://www.bmxadventure.com/',
     },
+
   ],
   'Website development': [
     {
-        title: 'E-Commerce Website',
-        description: 'A fully responsive online store with cart, payment gateway, and admin panel.',
-        featured: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s',
-        thumbnails: [
-          'https://cdn.prod.website-files.com/62d84e447b4f9e7263d31e94/6399a4d27711a5ad2c9bf5cd_ben-sweet-2LowviVHZ-E-unsplash-1.jpeg',
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s',
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s',
-        ],
-        link: 'https://yourprojectlink.com',
-      },
-      {
-        title: 'Portfolio Website',
-        description: 'A clean portfolio showcasing work and contact form.',
-        featured: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
-        thumbnails: [
-          'https://cdn.pixabay.com/photo/2017/01/06/19/15/soap-bubble-1958650_640.jpg',
-          'https://cdn.pixabay.com/photo/2021/08/18/08/53/hummingbird-6554093_640.jpg',
-          'https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg',
-        ],
-        link: 'https://portfolio.com',
-      },
-      {
-        title: 'Admin Dashboard',
-        description: 'Manage data, view stats, and generate reports.',
-        featured: 'https://images.unsplash.com/photo-1557804506-669a67965ba0',
-        thumbnails: [
-          'https://cdn.pixabay.com/photo/2022/11/03/09/45/mountains-7567495_640.jpg',
-          'https://cdn.pixabay.com/photo/2021/02/16/17/35/river-6021980_640.jpg',
-          'https://cdn.pixabay.com/photo/2017/08/30/07/51/lake-2691157_640.jpg',
-        ],
-        link: 'https://adminpanel.com',
-      },
+      title: 'Multi-Service Creative Agency',
+      description: 'A fully responsive online store with cart, payment gateway, and admin panel.',
+      featured: novieta1,
+      thumbnails: [
+        novieta1, novieta2, novieta3, novieta4
+      ],
+      link: 'https://novietaaplus.com/',
+    },
+    {
+      title: 'Trend Car Care',
+      description: 'A fully responsive online store with cart, payment gateway, and admin panel.',
+      featured: '../../../public/project/trend1.png',
+      thumbnails: [
+        '../../../public/project/trend1.png',
+        '../../../public/project/trend2.png',
+        '../../../public/project/trend3.png',
+        '../../../public/project/trend4.png',
+      ],
+      link: 'https://trendcarcare.com/',
+    },
+    {
+      title: 'Cash rewards game',
+      description: 'Become part of a thriving global community today and unlock thousands of dollars in earnings while connecting with a diverse international network.',
+      featured: '../../../public/project/bmx1.png',
+      thumbnails: [
+        '../../../public/project/bmx1.png',
+        '../../../public/project/bmx2.png',
+        '../../../public/project/bmx3.png',
+        '../../../public/project/bmx4.png',
+      ],
+      link: 'https://www.bmxadventure.com/',
+    },
   ],
   'App development': [
 
@@ -79,7 +83,7 @@ const projectsData = {
   ],
 };
 
-function ProjectCard({ title, description, featured, thumbnails, linkuuuuu }) {
+function ProjectCard({ title, description, featured, thumbnails, link }) {
   const [featuredImage, setFeaturedImage] = useState(featured);
 
   return (
@@ -88,7 +92,8 @@ function ProjectCard({ title, description, featured, thumbnails, linkuuuuu }) {
       <img
         src={featuredImage}
         alt='Featured Project'
-        className='w-full h-64 object-cover transition duration-300 ease-in-out'
+        style={{ backgroundSize: '100% 100%' }}
+        className='w-full h-full  transition duration-300 ease-in-out'
       />
 
       <div className='p-4'>
@@ -103,13 +108,16 @@ function ProjectCard({ title, description, featured, thumbnails, linkuuuuu }) {
               src={img}
               alt={`Thumb ${idx}`}
               onClick={() => setFeaturedImage(img)}
-              className='w-24 h-24 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-[#009688] transition'
+              className='w-24 h-24 mx-auto sm:mx-0 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-[#001196] transition'
             />
           ))}
         </div>
 
         <a href={link} target='_blank' rel='noopener noreferrer'>
-          <button className='bg-[#009688] text-white font-semibold px-4 py-2 rounded hover:bg-[#00796B] transition'>
+          <button
+            aria-label="Get Started"
+            className="mt-2 px-4 py-2 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
+          >
             View Project
           </button>
         </a>
@@ -149,7 +157,7 @@ export default function ProjectHome() {
             key={index}
             onClick={() => setProject(item)}
             className={` font-semibold p-3 rounded-md m-2 transition duration-200 
-                ${project === item ? 'bg-[#009688] text-white' : 'hover:bg-[#009688] hover:text-white'}`}
+                ${project === item ? 'bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left text-white' : 'hover:bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:text-white'}`}
           >
             {item}
           </button>

@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import Contacts from "./pages/Contacts";
-import Clients from "./pages/Clients";
+// import Clients from "./pages/Clients";
 import Service from "./pages/Service";
 import ServiceDetail from "./components/services/ServicesDetail";
 import Projeects from '../src/pages/Projects'
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/services", element: <Service /> },
       { path: "/servicedetail/:id", element: <ServiceDetail /> },
-      { path: "/clients", element: <Clients /> },
+      // { path: "/clients", element: <Clients /> },
       { path: "/team", element: <Team /> },
       { path: "/careers", element: <Careers /> },
       { path: "/contact", element: <Contacts /> },

@@ -39,10 +39,10 @@ const HomeAbout = () => {
               {aboutFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-[#0F00AA] rounded-full w-fit shadow-lg px-4 pe-6 py-1 flex items-center"
+                  className=" group cursor-pointer rounded-full w-fit shadow-lg px-4 pe-6 py-1 flex items-center"
                 >
-                  <span className="w-[15px] h-[15px] mr-4 rounded-full bg-[linear-gradient(142deg,#18c8ff,#c608ff)]"></span>
-                  <p className="text-md text-white">{feature.text}</p>
+                  <span className="w-[15px] transition-all ease-in delay-100 transform group-hover:translate-y-1/6 h-[15px] mr-4 rounded-full bg-[linear-gradient(142deg,#18c8ff,#c608ff)]"></span>
+                  <p className="text-md text-black transition-all ease-in delay-100 transform group-hover:-translate-y-1/6">{feature.text}</p>
                 </div>
               ))}
             </div>

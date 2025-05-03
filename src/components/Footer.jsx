@@ -27,9 +27,9 @@ const contactItems = [
 export default function Footer() {
   return (
     <footer className="bg-[#0A043C] text-white py-10 px-4 md:px-24 w-full">
-      <div className="flex justify-between w-full md:w-full">
+      <div className="flex flex-wrap justify-between w-full md:w-full">
         {/* Left Section */}
-        <div className="flex-1 w-[30%]">
+        <div className=" w-full  sm:w-[30%]">
           <div className="text-xl font-bold mb-2 flex items-center gap-2">
             <span className="text-white text-lg font-semibold">Code's Thinker</span>
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section with Flex Columns */}
-        <div className="flex md:w-[70%]">
+        <div className="flex flex-wrap w-full md:w-[70%]">
           {/* Services */}
           <div className="w-full md:w-[31%]">
             <div className="group relative inline-block mb-4">

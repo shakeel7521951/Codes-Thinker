@@ -1,10 +1,11 @@
 import React from "react";
 import Features from "./Features";
+import MovingServices from "./MovingServices";
 
 const Header = () => {
   return (
-    <header className="bg-white text-black mb-[-80px]">
-      <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
+    <header className="bg-white text-black mb-5">
+      <div className="container mx-auto px-4 py-5  flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6">
           <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight">
@@ -32,7 +33,7 @@ const Header = () => {
             </button>
             <button
               aria-label="View Portfolio"
-              className="mt-2 px-9 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#FFF200,#e1c700,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 hover:scale-105"
+              className="mt-2 px-9 py-3 cursor-pointer text-black hover:text-white text-lg font-semibold rounded-full shadow-lg bg-[linear-gradient(to_right,#FFF200,#e1c700,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 hover:scale-105"
             >
               Portfolio
             </button>
@@ -40,11 +41,9 @@ const Header = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full mb-20 sm:mb-0 h-full md:w-1/2 flex justify-center">
           <div className="w-full h-64 md:h-96 bg-white/10 rounded-xl shadow-inner flex items-center justify-center text-white text-xl backdrop-blur-md border border-white/20">
-            {/* You can place a Lottie animation, SVG, or image here */}
-            Image / Graphic
-            <img src="" />
+            <MovingServices/>
           </div>
         </div>
       </div>
