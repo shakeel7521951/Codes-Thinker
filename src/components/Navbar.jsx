@@ -32,7 +32,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex space-x-4 text-2xl">
               <Link to="/" className={navLinkClass}>Home {underlineSpan}</Link>
-              <Link to="/about" className={navLinkClass}>About {underlineSpan}</Link>
               <Link to="/services" className={navLinkClass}>Services {underlineSpan}</Link>
               {/* <Link to="/clients" className={navLinkClass}>Clients {underlineSpan}</Link> */}
 
@@ -74,7 +73,7 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-
+              <Link to="/about" className={navLinkClass}>About {underlineSpan}</Link>
               <Link to='/projects' className={navLinkClass}>Projects {underlineSpan}</Link>
             </div>
           </div>
