@@ -11,7 +11,11 @@ import Contacts from "./pages/Contacts";
 // import Clients from "./pages/Clients";
 import Service from "./pages/Service";
 import ServiceDetail from "./components/services/ServicesDetail";
-import Projeects from '../src/pages/Projects'
+import Projeects from "../src/pages/Projects";
+import { useProfileQuery } from "./redux/slices/UserApi";
+import { useDispatch } from "react-redux";
+import { clearProfile, setProfile } from "./redux/slices/UserSlice";
+import { useEffect } from "react";
 
 const MainLayout = () => {
   return (
@@ -37,12 +41,23 @@ const router = createBrowserRouter([
       { path: "/team", element: <Team /> },
       { path: "/careers", element: <Careers /> },
       { path: "/contact", element: <Contacts /> },
-      { path: "/projects", element: <Projeects/> },
+      { path: "/projects", element: <Projeects /> },
     ],
   },
 ]);
 
 function App() {
+  const dispatch = useDispatch();
+  const { data: profileData } = useProfileQuery();
+
+  useEffect(() => {
+    if (profileData) {
+      dispatch(setProfile(profileData.user));
+    } else {
+      dispatch(clearProfile());
+    }
+  }, [profileData, dispatch]);
+
   return <RouterProvider router={router} />;
 }
 
