@@ -1,5 +1,5 @@
 import { FaBootstrap, FaCode, FaFigma, FaPhp, FaReact, FaSearch, FaWordpress } from "react-icons/fa";
-import '../../../../Codes-Thinker/src/App.css';
+// import '../../../../Codes-Thinker/src/App.css';
 import { MdJavascript } from "react-icons/md";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiDjango } from "react-icons/di";
