@@ -1,9 +1,17 @@
 import React from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const OurValue = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
     <div className="container mx-auto px-5 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
-      
+
       {/* Left Content */}
       <div className="w-full md:w-1/2 flex flex-col items-start">
         <h1 className="text-3xl md:text-5xl font-bold">
@@ -12,7 +20,7 @@ const OurValue = () => {
             VALUE
           </span>
         </h1>
-        
+
         {/* Gradient Line */}
         <div className="w-24 h-1 bg-gradient-to-r from-[#0F00AA] to-[#0F00AA] rounded-full my-4" />
 
@@ -21,7 +29,8 @@ const OurValue = () => {
         </p>
 
         {/* Icons and Text */}
-        <div className="flex flex-col sm:flex-row gap-10">
+        <div className="flex flex-col sm:flex-row gap-10" data-aos="fade-right"
+          data-aos-anchor-placement="center-center">
           {/* Icons */}
           <div className="flex flex-row sm:flex-col gap-8">
             {["OurValueServicesIcon01.svg", "OurValueServicesIcon02.svg", "OurValueServicesIcon03.svg"].map((icon, index) => (
@@ -56,7 +65,7 @@ const OurValue = () => {
       </div>
 
       {/* Right Image */}
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="w-full md:w-1/2 flex justify-center items-center" data-aos="fade-down">
         <img
           src="./home/Home-Page-Our-Value-Services.png"
           alt="Home Page Our Value Services"

@@ -1,13 +1,21 @@
 import React from "react";
-import Features from "./Features";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import MovingServices from "./MovingServices";
 
 const Header = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.init({ duration: 1000, once: true });
+      AOS.refresh();
+    }, 200);
+  }, []);
   return (
     <header className="bg-white text-black mb-5">
-      <div className="container mx-auto px-4 py-5  flex flex-col-reverse md:flex-row items-center gap-10">
+      <div className="container mx-auto px-4 py-5 overflow-hidden  flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 space-y-6">
+        <div className="w-full md:w-1/2 space-y-6" data-aos="fade-left">
           <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight">
             Elevating
             <br />
@@ -41,13 +49,13 @@ const Header = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-full mb-20 sm:mb-0 h-full md:w-1/2 flex justify-center">
+        <div className="w-full mb-20 sm:mb-0 h-full md:w-1/2 flex justify-center" data-aos="fade-right">
           <div className="w-full h-64 md:h-96 bg-white/10 rounded-xl shadow-inner flex items-center justify-center text-white text-xl backdrop-blur-md border border-white/20">
-            <MovingServices/>
+            <MovingServices />
           </div>
         </div>
       </div>
-      {/* <Features /> */}
+
     </header>
   );
 };
