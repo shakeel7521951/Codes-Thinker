@@ -8,14 +8,14 @@ import Progress from '../components/home/Progress';
 import Testimonials from '../components/home/Testimonials';
 import Contact from './Contact';
 import Faqs from './Faqs';
-// import HomeHeader from '../components/home/HomeHeader';
+import HomeHeader from '../components/home/HomeHeader';
 import Features from '../components/home/Features';
 
 const Home = () => {
   return (
     <div>
-        <Header />
-        {/* <HomeHeader /> */}
+        {/* <Header /> */}
+        <HomeHeader />
         <Features />
         <HomeAbout />
         <HomeServices />

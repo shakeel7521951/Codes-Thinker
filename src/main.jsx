@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { store } from "./redux/store.jsx";
+import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById("root")).render(
       <div className="max-w-7xl mx-auto">
         <App />
       </div>
+      <ToastContainer />
     </Provider>
   </StrictMode>
 );
