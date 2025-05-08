@@ -20,19 +20,22 @@ const Contact = () => {
               img: "/home/contactIcon1.png",
               title: "Discuss Your Project",
               desc: "Invite clients to share their ideas and requirements, fostering an open dialogue about potential collaborations.",
+              aos: 'fade-right', duration: 1000
             },
             {
               img: "/home/contactIcon2.png",
               title: "Get a Free Consultation",
               desc: "Offer a no-obligation consultation to understand the client's needs and propose tailored solutions.",
+              aos: 'fade-right', duration: 2000
             },
             {
               img: "/home/contactIcon3.png",
               title: "Reach Us Anytime",
               desc: "Provide multiple contact channels, ensuring clients can connect with you at their convenience.",
+              aos: 'fade-right', duration: 3000
             },
           ].map((item, idx) => (
-            <div key={idx} className="flex gap-5 items-start mt-4">
+            <div key={idx} className="flex gap-5 items-start mt-4" data-aos={item.aos} data-aos-duration={item.duration}>
               <img
                 src={item.img}
                 alt="contact icon"
@@ -49,54 +52,54 @@ const Contact = () => {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-2/3 bg-[linear-gradient(45deg,#0F00AA,#060044)] p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-bold text-center text-white mb-6">
+        <div className="md:w-2/3  p-6 rounded-lg shadow-lg" data-aos="fade-left" data-aos-duration="1000">
+          <h2 className="text-xl font-bold text-center text-black mb-6">
             CONTACT US
           </h2>
           <form className="flex flex-col gap-4">
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex items-center  border-b-2 border-white text-white px-3 py-2 rounded w-full">
+              <div className="flex items-center  border border-black text-black px-3 py-2 rounded w-full">
                 <FaUser className="me-2" />
                 <input
                   type="text"
                   name="name"
                   placeholder="Full Name"
-                  className="w-full bg-transparent outline-none text-white placeholder-white"
+                  className="w-full bg-transparent outline-none text-black placeholder-black"
                 />
               </div>
-              <div className="flex items-center border-b-2 border-white text-white px-3 py-2 rounded w-full">
+              <div className="flex items-center border border-black text-black px-3 py-2 rounded w-full">
                 <FaPhoneAlt className="me-2" />
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
-                  className="w-full bg-transparent outline-none text-white placeholder-white"
+                  className="w-full bg-transparent outline-none text-black placeholder-black"
                 />
               </div>
             </div>
-            <div className="flex items-center border-b-2 border-white text-white px-3 py-2 rounded w-full">
+            <div className="flex items-center border border-black text-black px-3 py-2 rounded w-full">
               <MdEmail className="me-2" />
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="w-full bg-transparent outline-none text-white placeholder-white"
+                className="w-full bg-transparent outline-none text-black placeholder-black"
               />
             </div>
             <div
-              className="flex  items-start  border-2
-             border-white text-white px-3 py-2 rounded w-full"
+              className="flex  items-start  border
+             border-black text-black px-3 py-2 rounded w-full"
             >
               <textarea
                 name="message"
                 placeholder="Message"
                 rows={4}
-                className="w-full bg-transparent outline-none text-white placeholder-white resize-none"
+                className="w-full bg-transparent outline-none text-black placeholder-black resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-fit mt-2 px-8 py-3 cursor-pointer text-white text-lg font-semibold rounded-full shadow-lg 
+              className="w-fit mt-2 px-5 py-2 cursor-pointer text-black text-lg font-semibold rounded-full shadow-lg 
         bg-yellow-400 hover:bg-yellow-500 
         bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
             >

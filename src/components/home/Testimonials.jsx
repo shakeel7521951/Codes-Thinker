@@ -6,6 +6,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 import ReviewForm from "./ReviewForm";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -37,13 +40,21 @@ const Testimonials = () => {
     
   };
 
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
+
   return (
 
     <div className="sm:py-10 px-4 relative">
       <ReviewForm className={`${FormReview ? "block" : "hidden"}`} setFormReview={setFormReview} />
       <div className="w-full max-w-5xl mx-auto bg-[linear-gradient(45deg,#0F00AA,#060044)] p-8 md:p-10 rounded-xl flex flex-col md:flex-row gap-8 items-center">
         {/* Heading */}
-        <div className="w-full md:w-1/3 text-center md:text-left">
+        <div className="w-full md:w-1/3 text-center md:text-left"  data-aos="fade-down">
           <h1 className="text-3xl font-bold text-white leading-snug">
             Our{" "}
             <span className="text-[#FFF200]">
@@ -54,7 +65,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Carousel */}
-        <div className="w-full md:w-2/3">
+        <div className="w-full md:w-2/3" data-aos="zoom-in">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -98,7 +109,7 @@ const Testimonials = () => {
           </Swiper>
 
           <div className="flex justify-center sm:justify-end p-1">
-            <button
+            <button data-aos="zoom-out"
               onClick={handleAddReview}
               className="px-2 py-2 text-xs sm:px-3 sm:py-2 cursor-pointer text-black hover:text-white sm:text-lg font-semibold rounded text-md shadow-lg bg-[linear-gradient(to_right,#FFF200,#e1c700,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 hover:scale-105"
               title="Click to add your review"

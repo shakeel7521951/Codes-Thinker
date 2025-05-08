@@ -1,31 +1,38 @@
 import React, { useState, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import  { useEffect } from "react";
 const faqsData = [
   {
     question: "What services do you offer?",
     answer:
       "We offer web development, data science solutions, WordPress customization, and UI/UX design tailored to client needs.",
+      aos:"fade-right",duration:"1000"
   },
   {
     question: "How long does a project usually take?",
     answer:
       "Project timelines vary but typically range from 2 to 6 weeks depending on complexity and requirements.",
+      aos:"fade-right",duration:"2000"
   },
   {
     question: "Do you offer post-launch support?",
     answer:
       "Yes, we provide maintenance, updates, and technical support after your project goes live.",
+      aos:"fade-right",duration:"3000"
   },
   {
     question: "Can I get a custom design for my brand?",
     answer:
       "Absolutely. We create custom designs that align with your brand identity and audience.",
+      aos:"fade-right",duration:"3000"
   },
   {
     question: "How do I get started with a project?",
     answer:
       "Simply contact us through the form or email. We’ll schedule a free consultation to understand your goals.",
+      aos:"fade-right",duration:"4000"
   },
 ];
 
@@ -37,22 +44,30 @@ const Faqs = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
-    <div className="py-12 px-4 md:px-16 bg-gray-50">
+    <div className="py-12 px-4 md:px-16 bg-gray-50 overflow-hidden">
       <div className="text-center mb-10">
         <p className="text-gray-600 text-sm">Have You Any Question</p>
-        <h1 className="text-2xl md:text-4xl font-bold">
-          <span className="text-[#0F00AA]">Frequently</span> Asked Questions
+        <h1 className="text-2xl md:text-4xl font-bold" >
+          <span className="text-[#0F00AA]" data-aos="zoom-in-up">Frequently</span> <span data-aos="fade-up" data-aos-duration="4000">Asked Questions</span>
         </h1>
       </div>
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-start">
         {/* Left: Accordion */}
-        <div className="md:w-1/2 w-full">
+        <div className="md:w-1/2 w-full" >
           {faqsData.map((item, idx) => (
             <div
               key={idx}
               className="mb-4 overflow-hidden transition-all duration-500"
+              data-aos={item.aos}
+              data-aos-duration={item.duration}
             >
               <button
                 onClick={() => toggleAccordion(idx)}
@@ -86,7 +101,7 @@ const Faqs = () => {
         </div>
 
         {/* Right: Image */}
-        <div className="md:w-1/2 w-full">
+        <div className="md:w-1/2 w-full" data-aos="flip-left">
           <img
             src="/home/faqs.png"
             alt="FAQs Illustration"
