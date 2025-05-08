@@ -16,6 +16,14 @@ import { useProfileQuery } from "./redux/slices/UserApi";
 import { useDispatch } from "react-redux";
 import { clearProfile, setProfile } from "./redux/slices/UserSlice";
 import { useEffect } from "react";
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ForgotPassword from "./pages/ForgotPassword";
+import EmailOTPForm from "./pages/VerifyOtp";
+import ResetPassword from "./pages/ResetPassword";
+import UpdatePassword from "./pages/UpdatePassword";
+import VerifyUser from "./pages/VerifyUser";
+import MyProfile from "./pages/MyProfile";
 
 const MainLayout = () => {
   return (
@@ -42,8 +50,16 @@ const router = createBrowserRouter([
       { path: "/careers", element: <Careers /> },
       { path: "/contact", element: <Contacts /> },
       { path: "/projects", element: <Projeects /> },
+      { path: "/my-profile", element: <MyProfile /> },
     ],
   },
+  { path: "/login", element: <Login /> },
+  { path: "/sign-up", element: <Signup/> },
+  { path: "/forgot-password", element: <ForgotPassword/> },
+  { path: "/user", element: <EmailOTPForm/> },
+  { path: "/reset-password", element: <ResetPassword/> },
+  { path: "/update-password", element: <UpdatePassword/> },
+  { path: "/user-verification", element: <VerifyUser/> },
 ]);
 
 function App() {
