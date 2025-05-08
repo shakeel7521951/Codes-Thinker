@@ -23,6 +23,7 @@ import EmailOTPForm from "./pages/VerifyOtp";
 import ResetPassword from "./pages/ResetPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyUser from "./pages/VerifyUser";
+import MyProfile from "./pages/MyProfile";
 
 const MainLayout = () => {
   return (
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
       { path: "/careers", element: <Careers /> },
       { path: "/contact", element: <Contacts /> },
       { path: "/projects", element: <Projeects /> },
+      { path: "/my-profile", element: <MyProfile /> },
     ],
   },
   { path: "/login", element: <Login /> },
