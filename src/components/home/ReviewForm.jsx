@@ -1,19 +1,34 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
 export default function ReviewForm({ className, setFormReview }) {
+  const [data, setData] = useState({ rating: "", description: "" });
   const formRef = useRef(null);
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit= (e)=>{
+    e.preventDefault();
+    setFormReview(false);
+    try {
+      console.log(data);
+    } catch (error) {
+      
+    }
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (formRef.current && !formRef.current.contains(event.target)) {
-        setFormReview(false); // Close form if click is outside
+        setFormReview(false);
       }
     };
 
-    window.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      window.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener("mousedown", handleClickOutside);
     };
   }, [setFormReview]);
 
@@ -25,37 +40,22 @@ export default function ReviewForm({ className, setFormReview }) {
         ref={formRef}
         className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md"
       >
-        <h2 className="text-2xl font-bold mb-6 text-center">Submit Your Review</h2>
-        <form>
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          Submit Your Review
+        </h2>
+        <form  method="POST" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="border border-gray-300 rounded-lg p-2 w-full"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="border border-gray-300 rounded-lg p-2 w-full"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="review" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="review"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Review
             </label>
             <textarea
-              id="review"
+              id="description"
               rows="4"
+              name="description"
+              onChange={handleChange}
               className="border border-gray-300 rounded-lg p-2 w-full"
               required
             ></textarea>
