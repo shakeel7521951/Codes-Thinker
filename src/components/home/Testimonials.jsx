@@ -4,38 +4,40 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import ReviewForm from "./ReviewForm";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useLocation } from "react-router-dom";
+import { useGetReviewsQuery } from "../../redux/slices/ReviewApi";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Marketing Manager, TechNova",
-      message:
-        "This team exceeded our expectations. The project was delivered ahead of schedule and the quality was outstanding.",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    },
-    {
-      name: "David Thompson",
-      role: "CEO, BrightFuture Inc.",
-      message:
-        "Incredible service and attention to detail. I highly recommend them to anyone looking for a dedicated partner.",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Founder, StartSmart",
-      message:
-        "Their professionalism and skill are top-notch. They brought our vision to life better than we imagined.",
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-    },
-  ];
-
   const [FormReview, setFormReview] = useState(false);
+  const { data: reviewsResponse, isLoading, isError } = useGetReviewsQuery();
+
+  const reviews = reviewsResponse?.reviews || [];
+  const highRatedReviews = reviews.filter((review) => review.rating >= 4);
+
+  const renderStars = (rating) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<FaStar key={`full-${i}`} className="text-yellow-400" />);
+    }
+    if (hasHalfStar) {
+      stars.push(<FaStarHalfAlt key="half" className="text-yellow-400" />);
+    }
+
+    const emptyStars = 5 - stars.length;
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(<FaStar key={`empty-${i}`} className="text-gray-300" />);
+    }
+
+    return stars;
+  };
+
   const handleAddReview = () => {
     setFormReview(true);
   };
@@ -50,6 +52,15 @@ const Testimonials = () => {
   const location = useLocation();
   const homeTestimonials = location.pathname === "/";
   const aboutTestimonials = location.pathname === "/about";
+
+  if (isLoading)
+    return <div className="text-center py-10">Loading reviews...</div>;
+  if (isError)
+    return (
+      <div className="text-center py-10 text-red-500">
+        Error loading reviews
+      </div>
+    );
 
   return (
     <div className="sm:py-10 px-4 relative">
@@ -73,56 +84,70 @@ const Testimonials = () => {
 
           {/* Testimonials Carousel */}
           <div className="w-full md:w-2/3" data-aos="zoom-in">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={30}
-              slidesPerView={1}
-              pagination={aboutTestimonials ? false : { clickable: true }}
-              navigation={aboutTestimonials} // only show nav arrows on About page
-              autoplay={{ delay: 5000 }}
-              loop
-              className="rounded-lg overflow-hidden w-full"
-            >
-              {testimonials.map((item, index) => (
-                <SwiperSlide key={index} className="w-full">
-                  <div
-                    className={`${
-                      homeTestimonials ? "text-white" : "text-black bg-white"
-                    } w-full ${
-                      homeTestimonials ? "" : "sm:w-9/12"
-                    } mx-auto rounded-lg shadow-md p-6 space-y-4`}
+            {highRatedReviews.length > 0 ? (
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={30}
+                slidesPerView={1}
+                pagination={aboutTestimonials ? false : { clickable: true }}
+                navigation={aboutTestimonials}
+                autoplay={{ delay: 5000 }}
+                loop
+                className="rounded-lg overflow-hidden w-full"
+              >
+                {highRatedReviews.map((review) => (
+                  <SwiperSlide
+                    key={review._id || Math.random()}
+                    className="w-full"
                   >
-                    <div className="flex justify-start gap-6 items-center">
-                      <h1 className="text-md sm:text-xl font-bold">5.0</h1>
-                      <div className="flex text-yellow-400 text-md sm:text-xl ml-2 gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <span key={i}>
-                            <FaStar />
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="">
-                      <div className="flex justify-start gap-5 items-center">
-                        <img
-                          src={item.avatar}
-                          className="rounded-full h-20 w-20"
-                          alt={item.name}
-                        />
-                        <div className="">
-                          <h1 className="sm:text-lg font-semibold">
-                            {item.name}
-                          </h1>
-                          <p className="text-sm text-gray-400">{item.role}</p>
+                    <div
+                      className={`${
+                        homeTestimonials ? "text-white" : "text-black bg-white"
+                      } w-full ${
+                        homeTestimonials ? "" : "sm:w-9/12"
+                      } mx-auto rounded-lg shadow-md p-6 space-y-4`}
+                    >
+                      <div className="flex justify-start gap-6 items-center">
+                        <h1 className="text-md sm:text-xl font-bold">
+                          {review.rating?.toFixed(1) || "5.0"}
+                        </h1>
+                        <div className="flex text-md sm:text-xl ml-2 gap-1">
+                          {renderStars(review.rating || 5)}
                         </div>
                       </div>
-                      <p className="mt-2 text-sm">{item.message}</p>
+
+                      <div className="">
+                        <div className="flex justify-start gap-5 items-center">
+                          <img
+                            src={
+                              review.user?.profilePic ||
+                              "https://randomuser.me/api/portraits/lego/1.jpg"
+                            }
+                            className="rounded-full h-20 w-20"
+                            alt={review.user?.name || "Anonymous"}
+                          />
+                          <div className="">
+                            <h1 className="sm:text-lg font-semibold">
+                              {review.user?.name || "Anonymous"}
+                            </h1>
+                            <p className="text-sm text-gray-400">
+                              {review.user?.role || "Customer"}
+                            </p>
+                          </div>
+                        </div>
+                        <p className="mt-2 text-sm">
+                          {review.description || "No review text provided"}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            ) : (
+              <div className="text-white text-center py-10">
+                No high-rated reviews yet. Be the first to leave one!
+              </div>
+            )}
 
             <div className="flex justify-center sm:justify-end p-1">
               <button

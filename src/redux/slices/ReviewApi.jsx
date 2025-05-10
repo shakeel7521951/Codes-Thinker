@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const reviewApi = createApi({
   reducerPath: "reviewApi",
@@ -31,4 +31,5 @@ export const reviewApi = createApi({
   }),
 });
 
-export const { useCreateReviewMutation, useGetReviewsMutation } = reviewApi;
+// ✅ Export with correct hook names
+export const { useCreateReviewMutation, useGetReviewsQuery } = reviewApi;
