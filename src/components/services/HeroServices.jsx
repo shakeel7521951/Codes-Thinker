@@ -1,11 +1,19 @@
 import React from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import  { useEffect } from "react";
 const HeroServices = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
-    <header className="min-h-screen bg-white text-black ">
+    <header className="min-h-screen bg-white text-black overflow-hidden">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 space-y-6">
+        <div className="w-full md:w-1/2 space-y-6" data-aos="fade-right">
           <h1 className="text-4xl lg:text-6xl font-extrabold">
             Perfect It <span className="text-[#0F00AA]">
               Solutions
@@ -25,7 +33,7 @@ const HeroServices = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
           <div className="w-full h-64  md:h-96  rounded-xl  flex items-center justify-center text-white text-xl backdrop-blur-md border bg-white border-white/20">
             <div className="w-full h-full ">
               <img src="/services/hero.png" className=" w-full h-full"/>

@@ -1,5 +1,7 @@
 import React from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import  { useEffect } from "react";
 const departments = {
   Management: [
     { name: "Waseem", role: "Manager", img: "./team/b1.jpg" },
@@ -7,7 +9,7 @@ const departments = {
     { name: "Tahseen", role: "Coordinator", img: "./team/b2.jpg" },
   ],
   Development: [
-    { name: "Sara", role: "Frontend Dev", img: "./team/g2.jpg" },
+    { name: "Asad Soomro", role: "Frontend Developer", img: "./team/asad.jpg" },
     { name: "Waqas", role: "Backend Dev", img: "./team/b3.jpg" },
     { name: "Kinza", role: "Fullstack Dev", img: "./team/g3.jpg" },
   ],
@@ -22,16 +24,22 @@ const departments = {
 };
 
 const OurTeam = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
     <div className="">
       <header className="text-center py-10">
-        <h1 className="text-3xl md:text-5xl font-bold mb-2">
+        <h1 className="text-3xl md:text-5xl font-bold mb-2" data-aos="fade-down" data-aos-duration="1000">
           Meet Our{" "}
           <span className="text-[#0F00AA]">
             Team
           </span>
         </h1>
-        <p className="max-w-xl mx-auto text-sm md:text-lg px-4 md:p-0 text-black">
+        <p className="max-w-xl mx-auto text-sm md:text-lg px-4 md:p-0 text-black" data-aos="fade-left">
           Our team of passionate and experienced professionals is dedicated to
           driving your success. From strategy to execution, we combine
           creativity, innovation, and insight to deliver exceptional results.
@@ -41,13 +49,13 @@ const OurTeam = () => {
       {Object.entries(departments).map(([dept, members]) => (
         <section key={dept} className="py-10 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold text-black mb-6 text-start">
+            <h2 className="text-2xl md:text-4xl font-bold text-black mb-6 text-start" data-aos="fade-right">
               {dept}{" "}
               <span className="text-[#0F00AA]">
                 Department
               </span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center" data-aos="fade-up" data-aos-duration="2000">
               {members.map((member, idx) => (
                 <div
                   key={idx}
@@ -60,6 +68,7 @@ const OurTeam = () => {
                       src={member.img}
                       alt={member.name}
                       className="w-full h-full object-cover"
+                      style={{backgroundSize:"100% 100%"}}
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
                   </div>
