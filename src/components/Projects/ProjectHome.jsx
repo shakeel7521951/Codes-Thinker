@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import novieta1 from '../../../public/project/novieta1.png';
 import novieta2 from '../../../public/project/novieta2.png';
 import novieta3 from '../../../public/project/novieta3.png';
 import novieta4 from '../../../public/project/novieta4.png';
+import Aos from 'aos';
 const projectsData = {
   All: [
     {
@@ -13,6 +17,7 @@ const projectsData = {
         novieta1, novieta2, novieta3, novieta4
       ],
       link: 'https://novietaaplus.com/',
+      aos: 'fade-right', duration: '1000'
     },
     {
       title: 'Trend Car Care',
@@ -25,6 +30,7 @@ const projectsData = {
         '../../../public/project/trend4.png',
       ],
       link: 'https://trendcarcare.com/',
+      aos: 'fade-right', duration: '1000'
     },
     {
       title: 'Cash rewards game',
@@ -37,6 +43,7 @@ const projectsData = {
         '../../../public/project/bmx4.png',
       ],
       link: 'https://www.bmxadventure.com/',
+      aos: 'fade-right', duration: '1000'
     },
 
   ],
@@ -49,6 +56,7 @@ const projectsData = {
         novieta1, novieta2, novieta3, novieta4
       ],
       link: 'https://novietaaplus.com/',
+      aos: 'fade-right', duration: '1000'
     },
     {
       title: 'Trend Car Care',
@@ -61,6 +69,7 @@ const projectsData = {
         '../../../public/project/trend4.png',
       ],
       link: 'https://trendcarcare.com/',
+      aos: 'fade-right', duration: '1000'
     },
     {
       title: 'Cash rewards game',
@@ -73,6 +82,7 @@ const projectsData = {
         '../../../public/project/bmx4.png',
       ],
       link: 'https://www.bmxadventure.com/',
+      aos: 'fade-right', duration: '1000'
     },
   ],
   'App development': [
@@ -83,7 +93,7 @@ const projectsData = {
   ],
 };
 
-function ProjectCard({ title, description, featured, thumbnails, link }) {
+function ProjectCard({ title, description, featured, thumbnails, link, aos, duration }) {
   const [featuredImage, setFeaturedImage] = useState(featured);
 
   return (
@@ -94,9 +104,10 @@ function ProjectCard({ title, description, featured, thumbnails, link }) {
         alt='Featured Project'
         style={{ backgroundSize: '100% 100%' }}
         className='w-full h-full  transition duration-300 ease-in-out'
+        data-aos={aos}
       />
 
-      <div className='p-4'>
+      <div className='p-4' data-aos='fade-left' data-aos-duration={duration}>
         <h2 className='text-xl font-semibold mb-2'>{title}</h2>
         <p className='text-gray-600 mb-4'>{description}</p>
 
@@ -126,6 +137,9 @@ function ProjectCard({ title, description, featured, thumbnails, link }) {
   );
 }
 
+
+
+
 export default function ProjectHome() {
   const [project, setProject] = useState('All');
 
@@ -141,11 +155,17 @@ export default function ProjectHome() {
     );
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
     <div className='p-4'>
       <div>
         <h1 className='text-center sm:text-3xl p-3 font-semibold'>Project Section</h1>
-        <p className='text-center w-full mx-auto font-semibold mb-3 sm:w-7/12'>
+        <p className='text-center w-full mx-auto font-semibold mb-3 sm:w-7/12' >
           Explore a range of projects we’ve worked on across web, mobile, and design.
         </p>
       </div>
