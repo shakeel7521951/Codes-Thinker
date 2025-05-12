@@ -1,9 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import BACKEND_URL from '../../BaseUrl.jsx'; 
 
 export const reviewApi = createApi({
   reducerPath: "reviewApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000/api/v1",
+    baseUrl: BACKEND_URL,
     prepareHeaders: (headers, { getState }) => {
       const token = getState()?.user?.profile?.token;
       if (token) {
@@ -31,5 +32,4 @@ export const reviewApi = createApi({
   }),
 });
 
-// ✅ Export with correct hook names
 export const { useCreateReviewMutation, useGetReviewsQuery } = reviewApi;

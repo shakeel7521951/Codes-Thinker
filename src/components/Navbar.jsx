@@ -86,24 +86,24 @@ const Navbar = () => {
 
                 {isCompanyOpen && (
                   <div className="absolute z-10 left-0 mt-2 w-42 rounded-md shadow-lg border border-[#15A2D5] bg-gradient-to-b from-[#1A58A0] to-[#384C84] py-4 gap-3 flex flex-col items-center text-center">
-                    <a
-                      href="/team"
+                    <Link
+                      to="/team"
                       className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
                       Team
-                    </a>
-                    <a
-                      href="/careers"
+                    </Link>
+                    <Link 
+                      to="/careers"
                       className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
                       Careers
-                    </a>
-                    <a
-                      href="/contact"
+                    </Link>
+                    <Link
+                      to="/contact"
                       className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -173,13 +173,13 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="hidden md:block">
-                <a
-                  href="/login"
+                <Link
+                  to="/login"
                   className="text-white px-8 py-2 border border-[#f3f7f9] rounded-full text-lg font-semibold 
                   shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
                 >
                   Login
-                </a>
+                </Link>
               </div>
             )}
           </div>
@@ -257,13 +257,13 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="w-full flex justify-center  pt-2">
-              <a
-                href="#"
+              <Link
+                to="/login"
                 className="text-white px-4  py-2 border border-[#f3f7f9] rounded-full text-lg font-semibold 
                 shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
               >
-                Book a Intro Call
-              </a>
+                Login
+              </Link>
             </div>
           </div>
         </div>
