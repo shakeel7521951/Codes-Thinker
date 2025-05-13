@@ -64,26 +64,20 @@ const Navbar = () => {
               <Link to="/" className={navLinkClass}>
                 Home {underlineSpan}
               </Link>
-              <Link to="/services" className={navLinkClass}>
-                Services {underlineSpan}
-              </Link>
-              <Link
-                to="/team"
-                className={navLinkClass}
-              >
-                Team {underlineSpan}
-              </Link>
-              <Link
-                to="/contact"
-                className={navLinkClass}
-              >
-                Contact {underlineSpan}
-              </Link>
               <Link to="/about" className={navLinkClass}>
                 About {underlineSpan}
               </Link>
+              <Link to="/services" className={navLinkClass}>
+                Services {underlineSpan}
+              </Link>
               <Link to="/projects" className={navLinkClass}>
                 Projects {underlineSpan}
+              </Link>
+              <Link to="/team" className={navLinkClass}>
+                Team {underlineSpan}
+              </Link>
+              <Link to="/contact" className={navLinkClass}>
+                Contact {underlineSpan}
               </Link>
             </div>
           </div>
@@ -176,56 +170,17 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-3 sm:px-3 flex flex-col items-center">
-            {["Home", "About", "Services"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="w-full max-w-xs text-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
-
-            {/* Mobile Company Dropdown */}
-            <div className="w-full max-w-xs">
-              <button
-                onClick={toggleCompany}
-                className="w-full flex justify-center items-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200 relative"
-              >
-                Company
-                <span className="absolute right-4">
-                  {isCompanyOpen ? (
-                    <FaChevronUp className="h-4 w-4" />
-                  ) : (
-                    <FaChevronDown className="h-4 w-4" />
-                  )}
-                </span>
-              </button>
-
-              {isCompanyOpen && (
-                <div className="mt-1 space-y-1">
-                  {["Team", "Careers", "Contact"].map((item) => (
-                    <a
-                      key={item}
-                      href="#"
-                      className="block px-3 py-2 text-center rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {["Projects"].map((item) => (
-              <Link
-                key={item}
-                to="/projects"
-                className="w-full max-w-xs text-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
-              >
-                {item}
-              </Link>
-            ))}
+            {["Home", "About", "Services", "Projects", "Team", "Contact"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="w-full max-w-xs text-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              )
+            )}
 
             {/* CTA Button */}
             <div className="w-full flex justify-center  pt-2">
