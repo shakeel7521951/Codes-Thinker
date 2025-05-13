@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
-import Careers from "./pages/Careers";
+// import Careers from "./pages/Careers";
 import Contacts from "./pages/Contacts";
 // import Clients from "./pages/Clients";
 import Service from "./pages/Service";
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       { path: "/servicedetail/:id", element: <ServiceDetail /> },
       // { path: "/clients", element: <Clients /> }, //comment
       { path: "/team", element: <Team /> },
-      { path: "/careers", element: <Careers /> },
+      // { path: "/careers", element: <Careers /> },
       { path: "/contact", element: <Contacts /> },
       { path: "/projects", element: <Projeects /> },
       { path: "/my-profile", element: <MyProfile /> },

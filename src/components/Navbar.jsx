@@ -67,46 +67,18 @@ const Navbar = () => {
               <Link to="/services" className={navLinkClass}>
                 Services {underlineSpan}
               </Link>
-              {/* <Link to="/clients" className={navLinkClass}>Clients {underlineSpan}</Link> */}
-
-              {/* Company Dropdown */}
-              <div className="relative group">
-                <button
-                  onClick={toggleCompany}
-                  className={`${navLinkClass} flex items-center`}
-                >
-                  Company
-                  {isCompanyOpen ? (
-                    <FaChevronUp className="ml-1 h-3 w-3 cursor-pointer" />
-                  ) : (
-                    <FaChevronDown className="ml-1 h-3 w-3 cursor-pointer" />
-                  )}
-                  {underlineSpan}
-                </button>
-
-                {isCompanyOpen && (
-                  <div className="absolute z-10 left-0 mt-2 w-42 rounded-md shadow-lg border border-[#15A2D5] bg-gradient-to-b from-[#1A58A0] to-[#384C84] py-4 gap-3 flex flex-col items-center text-center">
-                    <Link
-                      to="/team"
-                      className="px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
-                    >
-                      Team
-                    </Link>
-                    <Link 
-                      to="/careers"
-                      className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
-                    >
-                      Careers
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="mt-1 px-2 py-2 text-white text-base font-medium w-[70%] bg-[#818CB6] hover:bg-[#1A58A0] hover:border hover:border-[#15A2D5] rounded-lg transition duration-200"
-                    >
-                      Contact
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <Link
+                to="/team"
+                className={navLinkClass}
+              >
+                Team {underlineSpan}
+              </Link>
+              <Link
+                to="/contact"
+                className={navLinkClass}
+              >
+                Contact {underlineSpan}
+              </Link>
               <Link to="/about" className={navLinkClass}>
                 About {underlineSpan}
               </Link>
