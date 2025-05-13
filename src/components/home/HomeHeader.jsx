@@ -31,7 +31,7 @@ const slides = [
 
 const HomeHeader = () => {
   return (
-    <div className="w-full md:h-[85vh] relative">
+    <div className="w-full h-[85vh] max-h-[500px] relative">
       <Swiper
         modules={[Autoplay, Pagination]}
         loop
