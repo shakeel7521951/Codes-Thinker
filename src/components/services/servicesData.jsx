@@ -26,6 +26,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 
+// services data.....
 const services = [
   {
     id: "1",
