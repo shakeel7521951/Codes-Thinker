@@ -13,7 +13,7 @@ import Features from '../components/home/Features';
 
 const Home = () => {
   return (
-    <div>
+    <div className='mt-20'>
         {/* <Header /> */}
         <HomeHeader />
         <Features />

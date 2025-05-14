@@ -3,7 +3,7 @@ import ProjectHome from '../components/Projects/ProjectHome'
 
 export default function Projects() {
   return (
-    <div>
+    <div className='mt-20'>
         <ProjectHome/>
     </div>
   )

@@ -4,7 +4,7 @@ import ServicesProvide from '../components/services/ServicesProvide';
 
 const Service = () => {
   return (
-    <div>
+    <div className='mt-20'>
       <HeroServices/>
       <ServicesProvide/>
     </div>
