@@ -3,7 +3,7 @@ import OurTeam from '../components/Team/OurTeam'
 
 const Team = () => {
   return (
-    <div>
+    <div className='mt-20'>
       <OurTeam/>
     </div>
   )

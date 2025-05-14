@@ -10,7 +10,7 @@ const HeroServices = () => {
     });
   }, []);
   return (
-    <header className="min-h-screen bg-white text-black overflow-hidden">
+    <header className=" bg-white text-black overflow-hidden">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6" data-aos="fade-right">

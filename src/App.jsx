@@ -24,10 +24,12 @@ import ResetPassword from "./pages/ResetPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyUser from "./pages/VerifyUser";
 import MyProfile from "./pages/MyProfile";
+import ScrollToTop from "./ScrollToTop";
 
 const MainLayout = () => {
   return (
     <div className="min-h-screen bg-white text-black">
+         <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />

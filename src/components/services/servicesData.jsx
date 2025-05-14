@@ -102,7 +102,7 @@ const services = [
     image: "/services/blockchain.jpg",
     details: [
       "Smart contracts",
-      "DApp development",
+      "App development",
       "NFT integration",
       "Wallet setup",
       "Blockchain consulting",
