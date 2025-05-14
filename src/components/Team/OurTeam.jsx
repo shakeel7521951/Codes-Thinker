@@ -9,7 +9,7 @@ const departments = {
     { name: "Tahseen", role: "Coordinator", img: "./team/b2.jpg" },
   ],
   Development: [
-    { name: "Asad Soomro", role: "Frontend Developer", img: "./team/asad.jpg" },
+    { name: "Asad Ullah", role: "Frontend Developer", img: "./team/asdi.jpg" },
     { name: "Waqas", role: "Backend Dev", img: "./team/b3.jpg" },
     { name: "Kinza", role: "Fullstack Dev", img: "./team/g4.jpg" },
   ],
