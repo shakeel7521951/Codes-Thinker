@@ -54,9 +54,10 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="./logo.svg"
+              // src="./logo.svg"
+              src="./companylogo.png"
               alt="Codes Thinker Logo"
-              className="h-10 w-auto text-white"
+              className="h-14 w-auto text-white"
             />
           </div>
 

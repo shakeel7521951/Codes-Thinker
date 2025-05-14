@@ -1,4 +1,9 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 
@@ -29,12 +34,20 @@ export default function Footer() {
     <footer className="bg-[#0A043C] text-white py-10 px-4 md:px-24 w-full">
       <div className="flex flex-wrap justify-between w-full md:w-full">
         {/* Left Section */}
-        <div className=" w-full  sm:w-[30%]">
+        <div className=" w-full sm:w-[30%]">
           <div className="text-xl font-bold mb-2 flex items-center gap-2">
-            <span className="text-white text-lg font-semibold">Code's Thinker</span>
+            <div className="flex-shrink-0 flex items-center">
+              <img
+                src="./companylogo.png"
+                alt="Codes Thinker Logo"
+                className="h-14 w-auto block"
+              />
+            </div>{" "}
           </div>
           <p className="text-sm text-gray-300 w-full md:w-[90%]">
-            We offer a range of cutting-edge web development and software solutions tailored to meet client needs. Our experienced team delivers collaboratively and efficiently.
+            We offer a range of cutting-edge web development and software
+            solutions tailored to meet client needs. Our experienced team
+            delivers collaboratively and efficiently.
           </p>
           <div className="flex gap-4 mt-4">
             {socialIcons.map((item, index) => (
