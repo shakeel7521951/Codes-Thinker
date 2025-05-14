@@ -54,9 +54,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="/logo.svg"
-              alt="TOJO Global Logo"
-              className="h-10 w-auto"
+              src="./logo.svg"
+              alt="Codes Thinker Logo"
+              className="h-10 w-auto text-white"
             />
           </div>
 

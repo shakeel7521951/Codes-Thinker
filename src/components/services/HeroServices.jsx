@@ -13,7 +13,7 @@ const HeroServices = () => {
     <header className=" bg-white text-black overflow-hidden">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 space-y-6" data-aos="fade-right">
+        <div className="w-full md:w-full space-y-6" data-aos="fade-right">
           <h1 className="text-4xl lg:text-6xl font-extrabold">
             Perfect It <span className="text-[#0F00AA]">
               Solutions
