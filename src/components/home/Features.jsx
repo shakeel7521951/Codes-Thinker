@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+
 const Features = () => {
   const features = [
     {
@@ -24,24 +25,31 @@ const Features = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration
-      once: true,     
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   return (
     <div className="bg-gradient-to-r from-[#f0f4ff] to-[#e8f6ff] py-10 my-10 px-6 overflow-hidden">
-      <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10 text-[#0F00AA]" data-aos="zoom-in">
+      <h2
+        className="text-center text-2xl sm:text-4xl font-bold mb-10 text-[#0F00AA]"
+        data-aos="zoom-in"
+      >
         What Makes Us Stand Out?
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-10 max-w-7xl mx-auto ">
+      <div className="flex flex-wrap justify-center gap-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="group relative w-62 p-8 bg-white rounded-3xl text-center shadow-xl transition-all duration-500 transform hover:scale-[1.05] hover:shadow-[0_20px_50px_rgba(0,180,255,0.25)] cursor-pointer hover:bg-gradient-to-br hover:from-[#0F00AA] hover:to-[#0F00A6] hover:text-white border border-gray-200 hover:border-transparent" data-aos="fade-left"
+            className="group relative w-62 p-8 bg-white rounded-3xl text-center shadow-xl transition-transform duration-700 ease-in-out hover:scale-[1.05] hover:shadow-[0_20px_50px_rgba(0,180,255,0.25)] cursor-pointer  hover:bg-gradient-to-br hover:from-[#0F00AA] hover:to-[#0F00A6] hover:text-white border border-gray-200 hover:border-transparent"
+            data-aos="fade-left"
           >
-            <div className="w-20 h-20 mb-6 mx-auto flex items-center justify-center bg-gradient-to-tr from-[#0F00AA] to-[#00B4FF] rounded-full group-hover:scale-110 transition-transform duration-500 shadow-md" data-aos="zoom-out">
+            <div
+              className="w-20 h-20 mb-6 mx-auto flex items-center justify-center bg-gradient-to-tr from-[#0F00AA] to-[#00B4FF] rounded-full group-hover:scale-110 transition-transform duration-700 shadow-md"
+              data-aos="zoom-out"
+            >
               <img
                 src={feature.image}
                 alt={feature.title}

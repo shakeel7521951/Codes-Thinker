@@ -1,50 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import services from "./servicesData";
-// const ServiceData = [
-//   {
-//     id: 1,
-//     img: "/services/web.jpg",
-//     title: "Web Development",
-//     desc: "This generator uses a dictionary of Latin words to construct",
-//     aos:'fade-right',duration:"1000"
-//   },
-//   {
-//     id: 2,
-//     img: "/services/app.jpg",
-//     title: "App Development",
-//     desc: "This generator uses a dictionary of Latin words to construct",
-//     aos:'zoom-in',duration:"2000"
-//   },
-//   {
-//     id: 3,
-//     img: "/services/uiux.jpg",
-//     title: "UI/UX Design",
-//     desc: "This generator uses a dictionary of Latin words to construct",
-//     aos:'fade-left',duration:"3000"
-//   },
-//   {
-//     id: 4,
-//     img: "/services/digital.jpg",
-//     title: "Digital Marketing",
-//     desc: "This generator uses a dictionary of Latin words to construct",
-//     aos:'fade-right',duration:"4000"
-//   },
-//   {
-//     id: 5,
-//     img: "/services/seo.jpg",
-//     title: "SEO and Database",
-//     desc: "This generator uses a dictionary of Latin words to construct",
-//     aos:'zoom-out',duration:"5000"
-//   },
-//   {
-//     id: 6,
-//     img: "/services/graphic.jpg",
-//     title: "Graphic Design",
-//     aos:'fade-left',duration:"6000",
-//     desc: "This generator uses a dictionary of Latin words to construct",
-//   },
-// ];
 
 const ServicesProvide = () => {
   const navigate = useNavigate();
@@ -54,7 +10,7 @@ const ServicesProvide = () => {
   };
 
   return (
-    <div className="  w-full mx-auto py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="w-full mx-auto py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="text-center">
         <h1 className="text-3xl md:text-5xl font-bold">
           Latest <span className="text-[#0F00AA]">Services</span>
@@ -72,7 +28,7 @@ const ServicesProvide = () => {
             <div className="shine-wrapper">
               <img
                 className="w-full h-52 object-cover"
-                src={item.img}
+                src={item.image}
                 alt={item.title}
               />
             </div>

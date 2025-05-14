@@ -67,7 +67,7 @@ const services = [
       "Automate deployments, improve scalability, and reduce downtime with our DevOps and cloud solutions.",
     long_description:
       "We streamline your development and deployment processes using DevOps best practices and cloud infrastructure such as AWS, Azure, and GCP. From CI/CD pipelines to containerization and monitoring, we help your business scale securely, efficiently, and reliably while reducing operational risks and downtime.",
-    image: "/services/devops.jpg",
+    image: "/services/devops&clouds.jpg",
     details: [
       "CI/CD pipelines",
       "Cloud architecture",
@@ -83,7 +83,7 @@ const services = [
       "Leverage AI and machine learning to automate processes, analyze data, and improve decision-making.",
     long_description:
       "We design and implement machine learning models that empower your business with data-driven insights and automation. From predictive analytics to image recognition and NLP, our solutions are tailored to solve real-world problems using the latest AI technologies and frameworks for better efficiency and performance.",
-    image: "/services/ml.jpg",
+    image: "/services/machinelearning.jpg",
     details: [
       "Data preprocessing",
       "Model training",
@@ -115,7 +115,7 @@ const services = [
       "Reliable and secure web hosting services with high uptime and technical support to keep your site running smoothly.",
     long_description:
       "We provide dependable web hosting solutions with fast servers, regular backups, SSL security, and expert support. Whether shared, VPS, or cloud hosting, we ensure your website stays online and performs at its best.",
-    image: "/services/hosting.jpg",
+    image: "/services/websitehosting.jpg",
     details: [
       "High uptime",
       "SSL certificates",
@@ -131,7 +131,7 @@ const services = [
       "Custom WordPress websites with modern themes, powerful plugins, and SEO optimization.",
     long_description:
       "Our WordPress development services include building custom themes, integrating powerful plugins, and optimizing performance for speed and SEO. Whether it's a blog, portfolio, or e-commerce site, we ensure your website is easy to manage, mobile-friendly, and built for success.",
-    image: "/services/wordpress.jpg",
+    image: "/services/wordpressdevelopment.jpg",
     details: [
       "Custom themes",
       "Plugin integration",
@@ -195,7 +195,7 @@ const services = [
       "Professional video editing for marketing, branding, tutorials, and more.",
     long_description:
       "We offer high-quality video editing services tailored to your business or personal brand. Whether you need promotional content, tutorials, or cinematic effects, we ensure smooth transitions, clear audio, engaging visuals, and fast turnaround times to elevate your video presence.",
-    image: "/services/video.jpg",
+    image: "/services/videoeditings.jpg",
     details: [
       "HD/4K editing",
       "Transitions & effects",
@@ -243,7 +243,7 @@ const services = [
       "Generate high-quality leads with targeted campaigns and data-driven marketing strategies.",
     long_description:
       "We help businesses grow by generating qualified leads through email marketing, landing pages, CRM integration, and ad campaigns. Our methods ensure your sales funnel stays full, targeting the right audience and converting them into long-term customers efficiently.",
-    image: "/services/leads.jpg",
+    image: "/services/leadgeneration.jpg",
     details: [
       "Targeted campaigns",
       "Email funnels",

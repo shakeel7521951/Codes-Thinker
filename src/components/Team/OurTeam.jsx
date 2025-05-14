@@ -11,11 +11,11 @@ const departments = {
   Development: [
     { name: "Asad Ullah", role: "Frontend Developer", img: "./team/asdi.jpg" },
     { name: "Waqas", role: "Backend Dev", img: "./team/b3.jpg" },
-    { name: "Kinza", role: "Fullstack Dev", img: "./team/g3.jpg" },
+    { name: "Kinza", role: "Fullstack Dev", img: "./team/g4.jpg" },
   ],
   Graphic: [
-    { name: "Fakhar", role: "Designer", img: "./team/b4.jpg" },
-    { name: "Fatima", role: "Illustrator", img: "./team/g4.jpg" },
+    { name: "Fakhar Abbas Bhatti", role: "Frontend Developer", img: "./team/fakhar.jpeg" },
+    { name: "Rida Fatima", role: "Frontend Developer", img: "./team/g3.jpg" },
   ],
   Marketing: [
     { name: "Hamza", role: "SEO Expert", img: "./team/b5.jpg" },
