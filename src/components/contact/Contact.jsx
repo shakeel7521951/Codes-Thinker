@@ -58,7 +58,7 @@ export default function ContactSection() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">
             Get In{" "}
-            <span className="text-transparent bg-clip-text bg-[linear-gradient(241deg,#18c8ff_14.59%,#c608ff_59.76%)]">
+            <span className="  text-[#0F00AA]">
               Touch
             </span>
           </h1>
@@ -66,10 +66,10 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-12 md:mt-20">
           <div className="space-y-8">
-            <h1 className="text-4xl mb-8 font-bold">
+            <h1 className="text-2xl sm:text-4xl mb-8 font-bold">
               Ready To Turn Your Vision Into Reality?
             </h1>
-            <p className="text-lg">
+            <p className="text-md sm:text-lg">
               Want to blast your business off like a rocket? Tojo Global's got a
               secret weapon for you: an amazing custom Marketing, Management,
               Design, Development & Crypto listing plan which will turn heads
@@ -79,7 +79,7 @@ export default function ContactSection() {
             {contactInfo.map((item, idx) => (
               <div key={idx} className="flex items-center space-x-4">
                 <div
-                  className="p-5 bg-gradient-to-br from-[#24B6FB] to-[#8C21DD] transform transition duration-300 hover:scale-105"
+                  className="p-5 bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] transform transition duration-300 hover:scale-105"
                   style={{
                     clipPath: "polygon(11% 28%, 100% 5%, 89% 91%, 0% 100%)",
                   }}
@@ -127,7 +127,8 @@ export default function ContactSection() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
+                  placeholder="Full Name"
                 />
               </div>
 
@@ -141,7 +142,9 @@ export default function ContactSection() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
+                  placeholder="Working Email"
+
                 />
               </div>
 
@@ -154,7 +157,9 @@ export default function ContactSection() {
                   id="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
+                  placeholder="Enter your Subject "
+
                 />
               </div>
 
@@ -167,13 +172,15 @@ export default function ContactSection() {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
+                  placeholder="Describe your message here"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="px-12 py-3 rounded-full bg-[linear-gradient(to_right,#18c8ff,#c608ff,#18c8ff)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 flex items-center gap-2 cursor-pointer font-medium text-white"
+                className="px-6 py-3 text-white  border border-[#f3f7f9] rounded-full text-lg font-semibold 
+                shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 flex items-center gap-3 cursor-pointer"
               >
                 SUBMIT <IoSendSharp className="w-5 h-5" />
               </button>
