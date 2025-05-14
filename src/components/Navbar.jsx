@@ -3,25 +3,18 @@ import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../redux/slices/UserApi";
-import { selectUserProfile } from "../redux/slices/UserSlice";
+import { selectUserProfile, clearProfile } from "../redux/slices/UserSlice";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const userProfile = useSelector(selectUserProfile);
   const [logout] = useLogoutMutation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleCompany = () => {
-    setIsCompanyOpen(!isCompanyOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleLogout = async (e) => {
     e.preventDefault();
@@ -39,6 +32,15 @@ const Navbar = () => {
     setDropdownOpen(false);
     navigate("/login");
   };
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+    { name: "Team", path: "/team" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   const navLinkClass = `group relative text-white px-3 py-2 text-lg font-medium hover:text-[#01b5e8] transition-colors duration-300`;
   const underlineSpan = (
@@ -61,27 +63,15 @@ const Navbar = () => {
           {/* Centered Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex space-x-4 text-2xl">
-              <Link to="/" className={navLinkClass}>
-                Home {underlineSpan}
-              </Link>
-              <Link to="/about" className={navLinkClass}>
-                About {underlineSpan}
-              </Link>
-              <Link to="/services" className={navLinkClass}>
-                Services {underlineSpan}
-              </Link>
-              <Link to="/projects" className={navLinkClass}>
-                Projects {underlineSpan}
-              </Link>
-              <Link to="/team" className={navLinkClass}>
-                Team {underlineSpan}
-              </Link>
-              <Link to="/contact" className={navLinkClass}>
-                Contact {underlineSpan}
-              </Link>
+              {navItems.map(({ name, path }) => (
+                <Link key={name} to={path} className={navLinkClass}>
+                  {name} {underlineSpan}
+                </Link>
+              ))}
             </div>
           </div>
 
+          {/* Desktop Right Side */}
           <div className="hidden lg:flex gap-4">
             {userProfile ? (
               <div className="relative">
@@ -170,23 +160,22 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-3 sm:px-3 flex flex-col items-center">
-            {["Home", "About", "Services", "Projects", "Team", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="w-full max-w-xs text-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {navItems.map(({ name, path }) => (
+              <Link
+                key={name}
+                to={path}
+                onClick={() => setIsMenuOpen(false)}
+                className="w-full max-w-xs text-center px-3 py-2 rounded-md text-lg font-medium text-white hover:text-[#01b5e8] hover:bg-gray-50/10 transition-colors duration-200"
+              >
+                {name}
+              </Link>
+            ))}
 
             {/* CTA Button */}
-            <div className="w-full flex justify-center  pt-2">
+            <div className="w-full flex justify-center pt-2">
               <Link
                 to="/login"
-                className="text-white px-4  py-2 border border-[#f3f7f9] rounded-full text-lg font-semibold 
+                className="text-white px-4 py-2 border border-[#f3f7f9] rounded-full text-lg font-semibold 
                 shadow-lg bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700"
               >
                 Login

@@ -87,7 +87,7 @@ const HomeServices = () => {
   return (
     <div className="bg-white py-10 overflow-hidden">
       <h1
-        className="text-3xl lg:text-5xl font-extrabold leading-tight text-center text-black"
+        className="text-3xl lg:text-5xl px-5 font-extrabold leading-tight text-start md:text-center text-black"
         data-aos="fade-down"
       >
         <span className="text-transparent bg-clip-text bg-[#0F00AA]">
@@ -95,7 +95,7 @@ const HomeServices = () => {
         </span>{' '}
         We Offer
       </h1>
-      <p className="text-center flex mx-auto px-5 md:w-[50rem]">
+      <p className="text-start md:text-center flex mx-auto px-5 md:w-[50rem]">
         TOJO GLOBAL offers crypto solutions, targeted marketing, impactful design, custom development, and professional video editing to elevate your brand.
       </p>
 
@@ -108,7 +108,7 @@ const HomeServices = () => {
               className={`text-center px-10 py-2 rounded-md border border-[#0000001d] shadow cursor-pointer font-semibold text-2xl ${
                 service.name === selectedService.name
                   ? 'text-white bg-[#0F00AA]'
-                  : 'hover:bg-[#0F00AA] text-black hover:text-white transition-all ease-in delay-100'
+                  : 'hover:bg-[#0F00AA] text-black hover:text-white transition-all ease-in delay-250'
               }`}
               onClick={() => handleServiceClick(service)}
             >
