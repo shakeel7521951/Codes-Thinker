@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
 const OurValue = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration
-      once: true,     // whether animation should happen only once
+      duration: 1000,
+      once: true,
     });
   }, []);
+
+  const values = [
+    {
+      icon: "OurValueServicesIcon01.svg",
+      title: "Integrity",
+      desc: "We hold ourselves to a strong ethical and moral code.",
+    },
+    {
+      icon: "OurValueServicesIcon02.svg",
+      title: "Trust",
+      desc: "We are dependable, loyal, and hardworking to achieve the same goal.",
+    },
+    {
+      icon: "OurValueServicesIcon03.svg",
+      title: "Excellence",
+      desc: "We consistently strive to deliver high-quality work without room for error.",
+    },
+  ];
+
   return (
     <div className="container mx-auto px-5 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
-
       {/* Left Content */}
       <div className="w-full md:w-1/2 flex flex-col items-start">
         <h1 className="text-3xl md:text-5xl font-bold">
@@ -28,44 +46,39 @@ const OurValue = () => {
           A melting pot for the best ideas
         </p>
 
-        {/* Icons and Text */}
-        <div className="flex flex-col sm:flex-row gap-10" data-aos="fade-right"
-          data-aos-anchor-placement="center-center">
-          {/* Icons */}
-          <div className="flex flex-row sm:flex-col gap-8">
-            {["OurValueServicesIcon01.svg", "OurValueServicesIcon02.svg", "OurValueServicesIcon03.svg"].map((icon, index) => (
-              <div key={index} className="bg-[#060044] p-3 rounded-lg border-2 border-white flex items-center justify-center">
-                <img src={`./home/${icon}`} alt={`OurValueServicesIcon0${index + 1}`} className="w-14" loading="lazy" />
+        {/* Icons and Text - Aligned Correctly */}
+        <div
+          className="flex flex-col gap-6"
+          data-aos="fade-right"
+          data-aos-anchor-placement="center-center"
+        >
+          {values.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-4"
+            >
+              <div className="bg-[#060044] p-3 mt-1 rounded-lg border-2 border-white flex items-center justify-center">
+                <img
+                  src={`./home/${item.icon}`}
+                  alt={item.title}
+                  className="w-14"
+                  loading="lazy"
+                />
               </div>
-            ))}
-          </div>
-
-          {/* Titles and Descriptions */}
-          <div className="flex flex-col gap-6">
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold">Integrity</h2>
-              <p className="text-base md:text-lg">
-                We hold ourselves to a strong ethical and moral code.
-              </p>
+              <div>
+                <h2 className="text-xl md:text-2xl font-bold">{item.title}</h2>
+                <p className="text-base md:text-lg">{item.desc}</p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold">Trust</h2>
-              <p className="text-base md:text-lg ">
-                We are dependable, loyal, and hardworking to achieve the same goal.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold">Excellence</h2>
-              <p className="text-base md:text-lg">
-                We consistently strive to deliver high-quality work without room for error.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* Right Image */}
-      <div className="w-full md:w-1/2 flex justify-center items-center" data-aos="fade-down">
+      <div
+        className="w-full md:w-1/2 flex justify-center items-center"
+        data-aos="fade-down"
+      >
         <img
           src="./home/Home-Page-Our-Value-Services.png"
           alt="Home Page Our Value Services"
@@ -73,7 +86,6 @@ const OurValue = () => {
           loading="lazy"
         />
       </div>
-
     </div>
   );
 };

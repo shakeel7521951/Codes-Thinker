@@ -6,26 +6,43 @@ import {
 } from "react-icons/fa";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const socialIcons = [
-  { icon: <FaFacebookF />, color: "#ffffff" },
-  { icon: <FaTwitter />, color: "#ffffff" },
-  { icon: <FaInstagram />, color: "#ffffff" },
-  { icon: <FaLinkedinIn />, color: "#ffffff" },
+  {
+    icon: <FaFacebookF />,
+    link: "https://www.facebook.com/profile.php?id=61565400934738",
+    color: "#ffffff",
+  },
+  {
+    icon: <FaTwitter />,
+    link: "", // You can remove this if not needed
+    color: "#ffffff",
+  },
+  {
+    icon: <FaInstagram />,
+    link: "https://www.instagram.com/codesthinker_offical",
+    color: "#ffffff",
+  },
+  {
+    icon: <FaLinkedinIn />,
+    link: "https://www.linkedin.com/in/codes-thinker",
+    color: "#ffffff",
+  },
 ];
 
 const contactItems = [
   {
-    icon: <MdLocationOn className="text-white text-base" />,
-    text: "Hassan Manzil Basement Hall Goheer Town Bahawalpur",
-  },
-  {
     icon: <BsTelephoneFill className="text-white text-base" />,
-    text: "03438739880",
+    text: "+44 7470 103120",
   },
   {
     icon: <MdEmail className="text-white text-base" />,
     text: "info@codesthinker.com",
+  },
+  {
+    icon: <MdLocationOn className="text-white text-base" />,
+    text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom",
   },
 ];
 
@@ -51,13 +68,16 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 mt-4">
             {socialIcons.map((item, index) => (
-              <div
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={index}
                 className="bg-[#0f00aa] p-2 rounded-full hover:text-white transition-transform transform hover:scale-110"
                 style={{ color: item.color }}
               >
                 {item.icon}
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -122,7 +142,7 @@ export default function Footer() {
             </div>
             <ul className="space-y-2 text-sm text-gray-300">
               {contactItems.map((item, index) => (
-                <li key={index} className="flex items-start gap-2">
+                <li key={index} className="flex items-center gap-4 py-1">
                   <div className="bg-[#0f00aa] p-2 rounded-full hover:text-white transition-transform transform hover:scale-110">
                     {item.icon}
                   </div>

@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   FaYoutube,
   FaLinkedinIn,
+  FaInstagram,
 } from "react-icons/fa";
 import { IoSendSharp } from "react-icons/io5";
 
@@ -45,11 +46,27 @@ export default function ContactSection() {
     },
   ];
 
-  const socialLinks = [
-    { icon: <FaTwitter />, href: "/#" },
-    { icon: <FaFacebookF />, href: "/#" },
-    { icon: <FaYoutube />, href: "/#" },
-    { icon: <FaLinkedinIn />, href: "/#" },
+  const socialIcons = [
+    {
+      icon: <FaFacebookF />,
+      link: "https://www.facebook.com/profile.php?id=61565400934738",
+      color: "#ffffff",
+    },
+    {
+      icon: <FaTwitter />,
+      link: "", // You can remove this if not needed
+      color: "#ffffff",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "https://www.instagram.com/codesthinker_offical",
+      color: "#ffffff",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      link: "https://www.linkedin.com/in/codes-thinker",
+      color: "#ffffff",
+    },
   ];
 
   return (
@@ -57,10 +74,7 @@ export default function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">
-            Get In{" "}
-            <span className="  text-[#0F00AA]">
-              Touch
-            </span>
+            Get In <span className="  text-[#0F00AA]">Touch</span>
           </h1>
         </div>
 
@@ -91,10 +105,11 @@ export default function ContactSection() {
             ))}
 
             <div className="flex gap-4 mt-6">
-              {socialLinks.map((item, idx) => (
+              {socialIcons.map((item, idx) => (
                 <a
                   key={idx}
-                  href={item.href}
+                  href={item.link}
+                  target="_blank"
                   className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-[#c508ff] to-[#18c9ff] p-[2px] transition-transform duration-300 hover:scale-110"
                 >
                   <div className="w-full h-full flex items-center justify-center bg-[#060145] rounded-full group-hover:bg-white transition-colors duration-300">
@@ -144,7 +159,6 @@ export default function ContactSection() {
                   onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
                   placeholder="Working Email"
-
                 />
               </div>
 
@@ -159,7 +173,6 @@ export default function ContactSection() {
                   onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-black"
                   placeholder="Enter your Subject "
-
                 />
               </div>
 
