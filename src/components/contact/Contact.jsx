@@ -34,7 +34,7 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: <FaPhoneAlt className="w-5 h-5 text-white" />,
-      text: "+92 348 3873980",
+      text: "+44 7470 103120",
     },
     {
       icon: <FaEnvelope className="w-5 h-5 text-white" />,
@@ -42,7 +42,7 @@ export default function ContactSection() {
     },
     {
       icon: <FaMapMarkerAlt className="w-5 h-5 text-white" />,
-      text: "Bahawalpur, Pakistan",
+      text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom",
     },
   ];
 
