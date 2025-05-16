@@ -89,9 +89,11 @@ const KeyFeatures = () => {
               key={index}
               data-aos={feature.aos}
               data-aos-duration={feature.duration}
-              className={`flex h-13 justify-center items-center gap-4 px-4 w-full sm:w-[340px] md:w-[340px] rounded-full border border-[#251d23] shadow-md shadow-black group hover:bg-gradient-to-br from-[#0F00AA] to-[#060044] cursor-pointer relative delay-100 hover:shadow-lg transition-all duration-500 ${feature.position}`}
+              className={`flex h-13 justify-center items-center gap-4 px-4 w-full sm:w-[340px] md:w-[340px] rounded-full border border-[#251d23] shadow-md shadow-black group cursor-pointer relative delay-100 hover:shadow-lg transition-all duration-700 bg-[length:200%_100%] bg-left hover:bg-right hover:text-white
+              ${feature.position}
+              bg-white hover:bg-[linear-gradient(to_right,#060044,#0F00AA,#060044)]`}
             >
-              <div className="h-[100%] absolute left-0 border-r-2 border-0 top-0 w-[15%] flex items-center justify-center rounded-full transition-all border-black delay-250 ease-in-out group-hover:border-r-2 group-hover:bg-black group-hover:border-white group-hover:text-white text-black text-xl shadow-md">
+              <div className="h-[100%] absolute left-0 border-r-2 border-0 top-0 w-[15%] flex items-center justify-center rounded-full transition-all border-black delay-250 ease-in-out group-hover:border-white group-hover:bg-black group-hover:text-white text-black text-xl shadow-md">
                 {feature.icon}
               </div>
               <span className="text-black transition-all delay-250 ease-in-out group-hover:text-white font-semibold text-base tracking-wide">
