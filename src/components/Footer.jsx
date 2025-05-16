@@ -30,7 +30,7 @@ const socialIcons = [
     color: "#ffffff",
   },
 ];
-
+//contact infromation 
 const contactItems = [
   {
     icon: <BsTelephoneFill className="text-white text-base" />,
