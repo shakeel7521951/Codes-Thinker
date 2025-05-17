@@ -12,7 +12,7 @@ function ProjectCard({ title, description, featured, thumbnails, link, aos, dura
       <img
         src={featuredImage}
         alt='Featured Project'
-        className='w-full h-full transition duration-300 ease-in-out'
+        className='w-full h-full max-h-[300px] transition duration-300 ease-in-out'
         data-aos={aos}
       />
       <div className='p-4' data-aos='fade-left' data-aos-duration={duration}>
