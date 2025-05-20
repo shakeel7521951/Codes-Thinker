@@ -71,7 +71,7 @@ const WhoWeAre = () => {
               <img
                 src="/about/img.jpg"
                 alt="career step"
-                className="w-28 h-28 md:w-40 md:h-40 rounded absolute -bottom-16 md:bottom-20 right-0 md:-right-5 object-contain"
+                className="w-28 h-28 md:w-40 md:h-40  absolute -bottom-16 sm:bottom-4 right-0 md:-right-10  object-contain"
               />
 
               <div className="h-18 w-18 md:h-24 md:w-24 absolute flex justify-center items-center top-2 bg-white p-2 rounded-full">
