@@ -29,7 +29,7 @@ import ScrollToTop from "./ScrollToTop";
 const MainLayout = () => {
   return (
     <div className="min-h-screen bg-white text-black">
-         <ScrollToTop />
+      <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />
@@ -56,12 +56,12 @@ const router = createBrowserRouter([
     ],
   },
   { path: "/login", element: <Login /> },
-  { path: "/sign-up", element: <Signup/> },
-  { path: "/forgot-password", element: <ForgotPassword/> },
-  { path: "/user", element: <EmailOTPForm/> },
-  { path: "/reset-password", element: <ResetPassword/> },
-  { path: "/update-password", element: <UpdatePassword/> },
-  { path: "/user-verification", element: <VerifyUser/> },
+  { path: "/sign-up", element: <Signup /> },
+  { path: "/forgot-password", element: <ForgotPassword /> },
+  { path: "/user", element: <EmailOTPForm /> },
+  { path: "/reset-password", element: <ResetPassword /> },
+  { path: "/update-password", element: <UpdatePassword /> },
+  { path: "/user-verification", element: <VerifyUser /> },
 ]);
 
 function App() {
