@@ -63,7 +63,7 @@ const ServiceDetail = () => {
             {service.details.map((detail, index) => (
               <div
                 key={index}
-                className="p-5 rounded-xl bg-[linear-gradient(45deg,#C608FF,#1862A3)] shadow-lg hover:shadow-[0_10px_25px_rgba(24,200,255,0.3)] transition-all cursor-pointer transform hover:-translate-y-2 duration-300"
+                className="p-5 rounded-xl bg-[linear-gradient(45deg,#060145,#1862A3)] shadow-lg hover:shadow-[0_10px_25px_rgba(24,200,255,0.3)] transition-all cursor-pointer transform hover:-translate-y-2 duration-300"
               >
                 <h3 className="text-lg font-bold text-white mb-2">{detail}</h3>
                 <p className="text-gray-100 text-sm">

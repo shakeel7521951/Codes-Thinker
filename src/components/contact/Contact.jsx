@@ -10,6 +10,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { IoSendSharp } from "react-icons/io5";
+import { MdLocationOn } from "react-icons/md";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -41,8 +42,12 @@ export default function ContactSection() {
       text: "info@codesthinker.com",
     },
     {
-      icon: <FaMapMarkerAlt className="w-5 h-5 text-white" />,
-      text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom",
+      icon: <MdLocationOn className="text-white text-base" />,
+      text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom(Regional Office)",
+    },
+    {
+      icon: <MdLocationOn className="text-white text-base" />,
+      text: "Hassan Manzil Basement Goheer Town Bahawalpur(Global Delivery Center)",
     },
   ];
 
@@ -80,10 +85,10 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-12 md:mt-20">
           <div className="space-y-8">
-            <h1 className="text-2xl sm:text-4xl mb-8 font-bold">
+            <h1 className="text-2xl sm:text-4xl mb-6 font-bold">
               Ready To Turn Your Vision Into Reality?
             </h1>
-            <p className="text-md sm:text-lg">
+            <p className="text-md sm:text-md">
               Want to blast your business off like a rocket? Tojo Global's got a
               secret weapon for you: an amazing custom Marketing, Management,
               Design, Development & Crypto listing plan which will turn heads
@@ -125,7 +130,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className=" p-6 rounded-4xl shadow shadow-[linear-gradient(45deg,#060145,#BE10FF)]"
+            className=" p-6 rounded-4xl shadow-[linear-gradient(45deg,#060145,#BE10FF)]"
           >
             <h2 className="text-2xl text-center font-bold mb-6">
               Book a Free Consultation

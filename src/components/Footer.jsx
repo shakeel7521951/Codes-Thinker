@@ -16,7 +16,7 @@ const socialIcons = [
   },
   {
     icon: <FaTwitter />,
-    link: "", // You can remove this if not needed
+    link: "", // Add Twitter link if needed
     color: "#ffffff",
   },
   {
@@ -30,7 +30,7 @@ const socialIcons = [
     color: "#ffffff",
   },
 ];
-//contact infromation 
+
 const contactItems = [
   {
     icon: <BsTelephoneFill className="text-white text-base" />,
@@ -42,11 +42,13 @@ const contactItems = [
   },
   {
     icon: <MdLocationOn className="text-white text-base" />,
-    text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom(Regional Office)",
+    text:
+      "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom (Regional Office)",
   },
   {
     icon: <MdLocationOn className="text-white text-base" />,
-    text: "Hassan Manzil Basement Goheer Town Bahawalpur(Global Delivery Center)",
+    text:
+      "Hassan Manzil Basement Goheer Town Bahawalpur (Global Delivery Center)",
   },
 ];
 
@@ -55,7 +57,7 @@ export default function Footer() {
     <footer className="bg-[#0A043C] text-white py-10 px-4 md:px-24 w-full">
       <div className="flex flex-wrap justify-between w-full md:w-full">
         {/* Left Section */}
-        <div className=" w-full sm:w-[30%]">
+        <div className="w-full sm:w-[30%]">
           <div className="text-xl font-bold mb-2 flex items-center gap-2">
             <div className="flex-shrink-0 flex items-center">
               <img
@@ -63,7 +65,7 @@ export default function Footer() {
                 alt="Codes Thinker Logo"
                 className="h-14 w-auto block"
               />
-            </div>{" "}
+            </div>
           </div>
           <p className="text-sm text-gray-300 w-full md:w-[90%]">
             We offer a range of cutting-edge web development and software
@@ -86,9 +88,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right Section with Flex Columns */}
+        {/* Right Section */}
         <div className="flex flex-wrap w-full md:w-[70%]">
-          {/* Services */}
+          {/* Services Section */}
           <div className="w-full md:w-[31%]">
             <div className="group relative inline-block mb-4">
               <h3 className="font-bold text-lg">Services</h3>
@@ -96,24 +98,23 @@ export default function Footer() {
             </div>
             <ul className="space-y-1 text-sm text-gray-300">
               {[
-                "Business Intelligence",
-                "Virtual Workstation",
-                "Network Services",
-                "Data Science",
-                "IT Strategy",
+                { label: "Business Intelligence", path: "/services" },
+                { label: "Virtual Workstation", path: "/services" },
+                { label: "Network Services", path: "/services" },
+                { label: "Data Science", path: "/services" },
+                { label: "IT Strategy", path: "/services" },
               ].map((item, idx) => (
-                <li
-                  key={idx}
-                  className="cursor-pointer font-medium group relative w-fit"
-                >
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                <li key={idx} className="font-medium group relative w-fit">
+                  <Link to={item.path} className="cursor-pointer">
+                    {item.label}
+                    <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company Section */}
           <div className="w-full md:w-[31%]">
             <div className="group relative inline-block mb-4">
               <h3 className="font-bold text-lg">Company</h3>
@@ -121,18 +122,17 @@ export default function Footer() {
             </div>
             <ul className="space-y-1 text-sm text-gray-300">
               {[
-                "About Us",
-                "Latest Projects",
-                "IT Solutions",
-                "Team Member",
-                "Contact Us",
+                { label: "About Us", path: "/about" },
+                { label: "Latest Projects", path: "/projects" },
+                { label: "IT Solutions", path: "/services" },
+                { label: "Team Member", path: "/team" },
+                { label: "Contact Us", path: "/contact" },
               ].map((item, idx) => (
-                <li
-                  key={idx}
-                  className="cursor-pointer font-medium group relative w-fit"
-                >
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                <li key={idx} className="font-medium group relative w-fit">
+                  <Link to={item.path} className="cursor-pointer">
+                    {item.label}
+                    <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -158,7 +158,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Email Input Section */}
+      {/* Email Input */}
       <div className="flex mt-8 w-full md:w-[30%] justify-end ms-auto rounded-xl">
         <input
           type="email"
