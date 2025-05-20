@@ -42,7 +42,11 @@ const contactItems = [
   },
   {
     icon: <MdLocationOn className="text-white text-base" />,
-    text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom",
+    text: "Bartle House 9 Oxford Court, Manchester M23WQ United Kingdom(Regional Office)",
+  },
+  {
+    icon: <MdLocationOn className="text-white text-base" />,
+    text: "Hassan Manzil Basement Goheer Town Bahawalpur(Global Delivery Center)",
   },
 ];
 
