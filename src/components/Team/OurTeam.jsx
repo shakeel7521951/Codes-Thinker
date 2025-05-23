@@ -4,23 +4,23 @@ import "aos/dist/aos.css";
 import  { useEffect } from "react";
 const departments = {
   Management: [
-    { name: "Waseem", role: "Manager", img: "./team/b1.jpg" },
+    { name: "Muhammad Waseem", role: "CEO", img: "./team/waseem.jpg" },
     { name: "Ayesha", role: "Assistant Manager", img: "./team/g1.jpg" },
     { name: "Tahseen", role: "Coordinator", img: "./team/b2.jpg" },
   ],
-  Development: [
-    { name: "Asad Ullah", role: "Frontend Developer", img: "./team/asdi.jpg" },
-    { name: "Waqas", role: "Backend Dev", img: "./team/b3.jpg" },
-    { name: "Kinza", role: "Fullstack Dev", img: "./team/g4.jpg" },
-  ],
-  Graphic: [
-    { name: "Fakhar Abbas Bhatti", role: "Frontend Developer", img: "./team/fakhar.jpeg" },
-    { name: "Rida Fatima", role: "Frontend Developer", img: "./team/g3.jpg" },
-  ],
-  Marketing: [
-    { name: "Hamza", role: "SEO Expert", img: "./team/b5.jpg" },
-    { name: "Arooj", role: "Social Media Expert", img: "./team/g5.jpg" },
-  ],
+  // Development: [
+  //   { name: "Asad Ullah", role: "Frontend Developer", img: "./team/asdi.jpg" },
+  //   { name: "Waqas", role: "Backend Dev", img: "./team/b3.jpg" },
+  //   { name: "Kinza", role: "Fullstack Dev", img: "./team/g4.jpg" },
+  // ],
+  // Graphic: [
+  //   { name: "Fakhar Abbas Bhatti", role: "Frontend Developer", img: "./team/fakhar.jpeg" },
+  //   { name: "Rida Fatima", role: "Frontend Developer", img: "./team/g3.jpg" },
+  // ],
+  // Marketing: [
+  //   { name: "Hamza", role: "SEO Expert", img: "./team/b5.jpg" },
+  //   { name: "Arooj", role: "Social Media Expert", img: "./team/g5.jpg" },
+  // ],
 };
 
 const OurTeam = () => {
@@ -39,7 +39,7 @@ const OurTeam = () => {
             Team
           </span>
         </h1>
-        <p className="max-w-xl mx-auto text-sm md:text-lg px-4 md:p-0 text-black" data-aos="fade-left">
+        <p className="max-w-3xl mx-auto text-sm md:text-lg px-4 md:p-0 text-black" data-aos="fade-left">
           Our team of passionate and experienced professionals is dedicated to
           driving your success. From strategy to execution, we combine
           creativity, innovation, and insight to deliver exceptional results.
@@ -50,9 +50,9 @@ const OurTeam = () => {
         <section key={dept} className="py-10 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-2xl md:text-4xl font-bold text-black mb-6 text-start" data-aos="fade-right">
-              {dept}{" "}
+              Global{" "}
               <span className="text-[#0F00AA]">
-                Department
+                Leadership
               </span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center" data-aos="fade-up" data-aos-duration="2000">
