@@ -1,6 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import about from "../../../public/about/about2.jpg";
+import about from "/about/about2.jpg";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

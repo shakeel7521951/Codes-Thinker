@@ -1,8 +1,7 @@
-import React from 'react'
-import submit from '../../../public/about/submit.jpg'
-import expert from '../../../public/about/Experts.jpg'
-import personal from '../../../public/about/personal.jpg'
-import seamless from '../../../public/about/seamless.jpg'
+import submit from '/about/submit.jpg'
+import expert from '/about/Experts.jpg'
+import personal from '/about/personal.jpg'
+import seamless from '/about/seamless.jpg'
 
 export default function CareerPathways() {
     const aray = [
@@ -25,7 +24,7 @@ export default function CareerPathways() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className='scale-110 transition-all ease-in-out duration-100 group-hover:scale-95 h-full w-full rounded-full'
+                                className='scale-110 transition-all ease-in-out duration-500 group-hover:scale-95 h-full w-full rounded-full'
                             />
                         </div>
                         <div className='mt-2'>
