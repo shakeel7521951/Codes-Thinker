@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { FaChevronDown, FaChevronUp, FaBars, FaTimes, FaCrown } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaBars,
+  FaTimes,
+  FaCrown,
+} from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../redux/slices/UserApi";
@@ -55,23 +61,28 @@ const Navbar = () => {
           <div className="relative w-[35%] sm:w-[15%]  group overflow-hidden">
             {/* Image (hidden by default, visible on hover) */}
             <div className="absolute  inset-0 w-0 flex items-center justify-center  transition-all ease-in  duration-500 group-hover:w-full group-hover:h-full">
-              <img
-                src="./companylogo.png"
-                alt="Codes Thinker Logo"
-                className="h-14 w-full"
-              />
+              <Link to="/">
+                <img
+                  src="./companylogo.png"
+                  alt="Codes Thinker Logo"
+                  className="h-14 w-full"
+                />
+              </Link>
             </div>
 
             {/* Text (visible by default, hidden on hover) */}
             <div className="flex flex-col  group-hover:translate-x-[120%]  transition-all ease-in justify-center duration-400">
-              <h1 className="text-white text-4xl md:text-7xl leading-none">C</h1>
+              <h1 className="text-white text-4xl md:text-[4rem] leading-none">
+                C
+              </h1>
               <div className="relative ml-[0.5rem] md:ml-[0.9rem] font-semibold -mt-7 sm:-mt-9">
-                <FaCrown className="absolute ml-[0.1rem] mt-[2px] md:ml-[0.2rem] md:-top-4 text-[#FFC41D] text-[10px] sm:text-xl" />
-                <h2 className="text-[#F69B23] mt-[7px] sm:mt-0 text-xl sm:text-5xl">T</h2>
+                <FaCrown className="absolute ml-[0.1rem] mt-[2px] md:ml-[0.1rem] md:-top-3 text-[#FFC41D] text-[10px] sm:text-[1.1rem]" />
+                <h2 className="text-[#F69B23] mt-[7px] sm:mt-0 text-xl sm:text-4xl">
+                  T
+                </h2>
               </div>
             </div>
           </div>
-
 
           {/* Centered Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">

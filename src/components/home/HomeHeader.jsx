@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules"; // Removed Navigation
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -64,12 +65,16 @@ const HomeHeader = () => {
                     {slide.description}
                   </p>
                   <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                    <button className="px-3 py-2 md:px-6 md:py-3 text-sx font-semibold rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 cursor-pointer">
-                      View Our Work
-                    </button>
-                    <button className="px-3 py-2 md:px-6 md:py-3 text-sx font-semibold rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 transform focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 cursor-pointer">
-                      Contact Us
-                    </button>
+                    <Link to="/projects">
+                      <button className="px-3 py-2 md:px-6 md:py-3 text-sx font-semibold rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 cursor-pointer">
+                        View Our Work
+                      </button>
+                    </Link>
+                    <Link to="/contact">
+                      <button className="px-3 py-2 md:px-6 md:py-3 text-sx font-semibold rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 transform focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 cursor-pointer">
+                        Contact Us
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -76,6 +75,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   placeholder="Full Name"
+                  required
                   className="w-full bg-transparent outline-none text-black placeholder-black"
                 />
               </div>
@@ -85,6 +85,7 @@ const Contact = () => {
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
+                  required
                   className="w-full bg-transparent outline-none text-black placeholder-black"
                 />
               </div>
@@ -95,6 +96,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
+                required
                 className="w-full bg-transparent outline-none text-black placeholder-black"
               />
             </div>
@@ -106,6 +108,7 @@ const Contact = () => {
                 name="message"
                 placeholder="Message"
                 rows={4}
+                required
                 className="w-full bg-transparent outline-none text-black placeholder-black resize-none"
               />
             </div>

@@ -5,7 +5,7 @@ import  { useEffect } from "react";
 const departments = {
   Management: [
     { name: "Muhammad Waseem", role: "CEO", img: "./team/waseem.jpg" },
-    { name: "Ayesha", role: "Assistant Manager", img: "./team/g1.jpg" },
+    { name: "Saim", role: "Head of Business/UK", img: "./team/g1.jpg" },
     { name: "Tahseen", role: "Coordinator", img: "./team/b2.jpg" },
   ],
   // Development: [

@@ -24,6 +24,10 @@ export default function RegisterPage() {
     }));
   };
 
+  const signupWithGoogle = ()=>{
+    toast("Singup with google comming soon!")
+  }
+
   // Handle Form Submission
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -148,7 +152,8 @@ export default function RegisterPage() {
           {/* Google Sign-up Button */}
           <button
             type="button"
-            className="flex items-center justify-center w-full border border-gray-300 p-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300"
+            onClick={signupWithGoogle}
+            className="flex items-center cursor-pointer justify-center w-full border border-gray-300 p-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300"
           >
             <div className="p-2 bg-red-500 rounded-full flex items-center justify-center">
               <FaGoogle className="text-white" />
