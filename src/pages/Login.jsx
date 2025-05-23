@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
-// import loginImage from "../assets/AUTH/LOGIN.jpg";
+import loginImage from "/login.jpg";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -107,9 +107,9 @@ export default function LoginPage() {
         </div>
 
         {/* Right Side - Image */}
-        {/* <div className="hidden md:flex w-1/2 bg-gray-50 items-center justify-center">
+        <div className="hidden md:flex w-1/2 bg-gray-50 items-center justify-center">
           <img src={loginImage} alt="Login Illustration" className="w-[80%] object-cover rounded-lg shadow-lg" />
-        </div> */}
+        </div>
       </div>
     </div>
   );
