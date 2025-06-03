@@ -1,13 +1,15 @@
 import { useState } from "react";
-// import signup from "../assets/AUTH/signup.jpg";
-import { FaGoogle } from "react-icons/fa";
+import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import loginImage from "/login.jpg";
 import { useNavigate } from "react-router-dom";
 import { useUserRegistrationMutation } from "../redux/slices/UserApi";
 
 export default function RegisterPage() {
   const [userRegistration, { isLoading }] = useUserRegistrationMutation();
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,7 +17,6 @@ export default function RegisterPage() {
     rememberMe: false,
   });
 
-  // Handle Input Changes
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
@@ -24,11 +25,14 @@ export default function RegisterPage() {
     }));
   };
 
-  const signupWithGoogle = ()=>{
-    toast("Singup with google comming soon!")
-  }
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
 
-  // Handle Form Submission
+  const signupWithGoogle = () => {
+    toast("Signup with Google coming soon!");
+  };
+
   const handleRegister = async (e) => {
     e.preventDefault();
     if (isLoading) return;
@@ -41,7 +45,7 @@ export default function RegisterPage() {
       toast.success(response.data?.message || "Registration successful!", {
         position: "top-center",
       });
-      navigate('/user-verification', { state: { user:formData } });
+      navigate("/user-verification", { state: { user: formData } });
     }
   };
 
@@ -49,13 +53,13 @@ export default function RegisterPage() {
     <div className="flex min-h-screen items-center justify-center p-4">
       <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-lg rounded-xl overflow-hidden">
         {/* Left Side */}
-        {/* <div className="hidden md:flex w-1/2 bg-gray-50 items-center justify-center">
+        <div className="hidden md:flex w-1/2 bg-gray-50 items-center justify-center">
           <img
-            src={signup}
+            src={loginImage}
             alt="Signup Illustration"
             className="w-[80%] object-cover rounded-lg shadow-lg"
           />
-        </div> */}
+        </div>
 
         {/* Right Side */}
         <form className="w-full md:w-1/2 flex flex-col p-8" onSubmit={handleRegister}>
@@ -63,6 +67,7 @@ export default function RegisterPage() {
             Create an Account
           </h2>
 
+          {/* Name */}
           <div className="mb-4">
             <label className="block text-gray-700 text-md font-medium">
               Full Name
@@ -78,6 +83,7 @@ export default function RegisterPage() {
             />
           </div>
 
+          {/* Email */}
           <div className="mb-4">
             <label className="block text-gray-700 text-md font-medium">
               Email
@@ -93,21 +99,31 @@ export default function RegisterPage() {
             />
           </div>
 
-          <div className="mb-4">
+          {/* Password */}
+          <div className="mb-4 relative">
             <label className="block text-gray-700 text-md font-medium">
               Password
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
-              className="w-full border border-gray-300 p-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 p-3 pr-10 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your password"
               value={formData.password}
               onChange={handleChange}
               required
             />
+            <button
+              type="button"
+              onClick={togglePasswordVisibility}
+              className="absolute top-10 right-3 text-gray-600 cursor-pointer"
+              tabIndex={-1}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
           </div>
 
+          {/* Remember Me + Forgot */}
           <div className="flex items-center justify-between my-4">
             <div className="flex items-center cursor-pointer">
               <input
@@ -133,6 +149,7 @@ export default function RegisterPage() {
             </button>
           </div>
 
+          {/* Submit */}
           <button
             type="submit"
             className={`w-full bg-blue-600 text-white p-3 rounded-lg mt-4 font-semibold hover:bg-blue-700 transition duration-300 shadow-md cursor-pointer ${
@@ -143,13 +160,14 @@ export default function RegisterPage() {
             {isLoading ? "Loading..." : "Create Account"}
           </button>
 
+          {/* OR Divider */}
           <div className="flex items-center my-6">
             <div className="flex-grow h-px bg-gray-300"></div>
             <span className="px-3 text-gray-500">OR</span>
             <div className="flex-grow h-px bg-gray-300"></div>
           </div>
 
-          {/* Google Sign-up Button */}
+          {/* Google Sign Up */}
           <button
             type="button"
             onClick={signupWithGoogle}

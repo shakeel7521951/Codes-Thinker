@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  useProfileQuery,
-  useUpdateProfileMutation,
-} from "../redux/slices/UserApi";
+import { useProfileQuery } from "../redux/slices/UserApi";
 import { clearProfile, setProfile } from "../redux/slices/UserSlice";
 
 const MyProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { data: profileData, isLoading, error } = useProfileQuery();
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [updateProfile] = useUpdateProfileMutation();
 
   useEffect(() => {
     if (profileData?.user) {
@@ -23,7 +18,7 @@ const MyProfile = () => {
 
   const profile = useSelector((state) => state.user.profile);
 
-  const handleDeleteProfile = async () => {
+  const handleDeleteProfile = () => {
     try {
       dispatch(clearProfile());
       navigate("/");
@@ -35,34 +30,6 @@ const MyProfile = () => {
     }
   };
 
-  const handleImageChange = async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-  
-    setSelectedImage(URL.createObjectURL(file));
-  
-    const formData = new FormData();
-    formData.append("profilePic", file);
-  
-    try {
-      const resp = await updateProfile(formData);
-      console.log(resp);
-  
-      if (resp.error) {
-        toast.error(
-          resp.error.data?.message || "Failed to update profile picture"
-        );
-      } else {
-        toast.success(
-          resp.data?.message || "Profile picture updated successfully"
-        );
-        dispatch(setProfile(resp.data?.user));
-      }
-    } catch (error) {
-      toast.error("An error occurred while updating profile picture");
-    }
-  }; 
-
   if (isLoading) return <div className="text-center mt-10">Loading...</div>;
   if (error)
     return (
@@ -73,22 +40,13 @@ const MyProfile = () => {
   if (!profile)
     return <div className="text-center mt-10">No profile found</div>;
 
-  const userInitial = profile?.name?.charAt(0).toUpperCase() || "U";
+  const userInitial = profile?.name?.charAt(0).toUpperCase() || "S";
 
   return (
-    <div className="flex justify-center my-8">
+    <div className="flex justify-center my-8 mt-12">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center">
-        <div
-          className="w-24 h-24 rounded-full border-4 border-blue-500 flex items-center justify-center bg-gray-100 text-2xl font-bold text-blue-600 cursor-pointer relative overflow-hidden group"
-          onClick={() => document.getElementById("imageInput").click()}
-        >
-          {selectedImage ? (
-            <img
-              src={selectedImage}
-              alt="Profile"
-              className="w-full h-full object-cover"
-            />
-          ) : profile.profilePic ? (
+        <div className="w-24 h-24 rounded-full border-4 border-blue-500 flex items-center justify-center bg-gray-100 text-2xl font-bold text-blue-600 overflow-hidden">
+          {profile.profilePic ? (
             <img
               src={profile.profilePic}
               alt="Profile"
@@ -97,17 +55,7 @@ const MyProfile = () => {
           ) : (
             userInitial
           )}
-          <div className="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm transition-opacity duration-300">
-            Change Photo
-          </div>
         </div>
-
-        <input
-          id="imageInput"
-          type="file"
-          onChange={handleImageChange}
-          className="hidden"
-        />
 
         <p className="text-2xl font-bold mt-4 text-blue-600">
           Hello, {profile.name}

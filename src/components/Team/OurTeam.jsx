@@ -6,7 +6,7 @@ const departments = {
   Management: [
     { name: "Muhammad Waseem", role: "CEO", img: "./team/waseem.jpg" },
     { name: "Saim", role: "Head of Business/UK", img: "./team/b2.jpg" },
-    { name: "Tahseen", role: "Coordinator", img: "./team/b2.jpg" },
+    { name: "Malaika Noor", role: "Business Developer", img: "./team/g1.jpg" },
   ],
   // Development: [
   //   { name: "Asad Ullah", role: "Frontend Developer", img: "./team/asdi.jpg" },
